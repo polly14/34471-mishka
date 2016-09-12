@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишкаю Каталог</title>
+  </head>
+  <body>
+    <!-- top menu, mobile menu -->
+    <header class="topmenu">
+      <div class="topmenu__logo">
+        <img src="http://placehold.it/100x75">
+      </div>
+      <nav class="topnav  topnav--closed">
+        <button class="topnav__toggle" type="button"></button>
+        <div class="topnav__wrapper">
+          <ul class="topnav__menu">
+            <li class="topnav__item"><a href="">Каталог товаров</a></li>
+            <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+          </ul>
+          <ul class="topnav__user">
+            <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
+            <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>  
+    <!-- header --> 
+    <section class="pagebanner pagebanner--page">
+      <h1 class="pagebanner__title">Каталог товаров</h1>
+    </section>
+    <!-- items -->
+    <section class="catalog">
+      <div class="catalogitem">
+          <div class="catalogitem__img">
+            <img src="http://placehold.it/260x145">
+          </div>
+          <h3 class="catalogitem__title">Зайчик-попрыгайчик</h3>
+          <p class="catalogitem__info">Рост 30 см, вес 200 г</p>
+          <div class="catalogitem__user">
+            <div class="catalogitem__price">1200 руб.</div>
+            <button class="catalogitem__addtocart" type="button"></button>
+          </div>
+      </div>
+      <div class="catalogitem">
+          <div class="catalogitem__img">
+            <img src="http://placehold.it/260x145">
+          </div>
+          <h3 class="catalogitem__title">Корзинка для белья</h3>
+          <p class="catalogitem__info">Диаметр 15 см, высота 10 см</p>
+          <div class="catalogitem__user">
+            <div class="catalogitem__price">690 руб.</div>
+            <button class="catalogitem__addtocart" type="button"></button>
+          </div>
+      </div>
+      <div class="catalogitem">
+          <div class="catalogitem__img">
+            <img src="http://placehold.it/260x145">
+          </div>
+          <h3 class="catalogitem__title">Большая корзинка для игрушек</h3>
+          <p class="catalogitem__info">Диаметр 30 см, высота 30 см</p>
+          <div class="catalogitem__user">
+            <div class="catalogitem__price">1500 руб.</div>
+            <button class="catalogitem__addtocart" type="button"></button>
+          </div>
+      </div>
+    </section>
+    <!-- video -->
+    <section class="video">
+      <div class="processvideo">
+        <h3 class="processvideo__title"></h3>
+        <video class="processvideo__video" controls width="260" height="150" preload="metadata" poster="http://placehold.it/260x150">
+          <source src="video.mp4" type="video/mp4">
+          <source src="video.ogv" type="video/ogg">
+          <source src="video.webm" type="video/webm">
+        </video>
+        <p class="processvideo__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <button type="button" class="button button--order">Сделать заказ</button>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="pagefooter">
+      <div class="pagefooter__social">
+        <p class="sociallinks">
+          <a class="sociallink sociallink--in" href=""></a>
+          <a class="sociallink sociallink--fb" href=""></a>
+          <a class="sociallink sociallink--tw" href=""></a>
+        </p>
+      </div>
+      <div class="pagefooter__copyright">
+        Разработано:
+        <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru">HTML Academy</a>
+      </div>
+    </footer>
+    <!-- modal -->
+    <section class="addtocart">
+      <h4 class="addtocart__title">Добавить в корзину</h4>
+      <form class="addtocart__form">
+        <div class="addtocart__size">
+        <label>Выберите размер:</label>
+        <input id="checkbox-s" type="checkbox" checked>
+        <label for="checkbox-s">S</label>
+        <input id="checkbox-m" type="checkbox">
+        <label for="checkbox-m">M</label>
+        <input id="checkbox-l" type="checkbox" >
+        <label for="checkbox-l">L</label>
+        </div>
+        <button class="button button--addtocart">Добавить</button>
+      </form>
+    </section>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
