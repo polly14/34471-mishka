@@ -8,7 +8,7 @@
     <!-- top menu, mobile menu -->
     <header class="topmenu">
       <div class="topmenu__logo">
-        <img src="http://placehold.it/100x75">
+        <a href=""><img src="http://placehold.it/100x75"></a>
       </div>
       <nav class="topnav  topnav--closed">
         <button class="topnav__toggle" type="button"></button>
@@ -30,7 +30,7 @@
     </section>
     <!-- form -->
     <section class="nazakaz">
-        <p class="nazakaz__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <p class="nazakaz__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="nazakaz__form">
         <fieldset>
           <legend>Тип</legend>
@@ -62,11 +62,11 @@
           <legend>ФИО</legend>
           <div class="nazakaz__name">
             <label for="name">Имя:</label>
-            <input id="name" type="text" placeholder="Введите ваше имя">            
+            <input id="name" type="text" placeholder="Введите ваше имя" required>            
           </div>
           <div class="nazakaz__family">
             <label for="family">Фамилия:</label>
-            <input id="family" type="text" placeholder="Укажите фамилию">            
+            <input id="family" type="text" placeholder="Укажите фамилию"  required>            
           </div>
           <div class="nazakaz__otchestvo">
             <label for="otchestvo">Отчество:</label>
@@ -76,23 +76,23 @@
         <fieldset>
           <legend>Тел</legend>
           <div class="nazakaz__tel">
-            <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ">            
+            <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>            
           </div>          
         </fieldset>
         <fieldset>
           <legend>E-mail</legend>
           <div class="nazakaz__email">
-            <input id="email" type="email" placeholder="Ваш Email">            
+            <input id="email" type="email" placeholder="Ваш Email" required>            
           </div>          
         </fieldset>
         <fieldset>
           <legend>Доп</legend>
           <div class="nazakaz__dop">
-            <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу"></textarea>           
+            <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу" required></textarea>           
           </div>          
         </fieldset>
         <p class="nazakaz__zametka">Все поля обязательны для заполнения</p>
-        <input type="submit" class="button button--order" value="Отправить заказ">
+        <input type="submit" class="btn btn--order" value="Отправить заказ">
       </form>
     </section>
     <!-- footer -->
@@ -111,22 +111,4 @@
     </footer>    
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
