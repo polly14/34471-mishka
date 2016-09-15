@@ -29,12 +29,12 @@
       <h1 class="pagebanner__title">Вязание на заказ</h1>
     </section>
     <!-- form -->
-    <section class="nazakaz">
-      <p class="nazakaz__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="nazakaz__form">
+    <section class="orderform">
+      <p class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="orderform__form">
         <fieldset>
           <legend>Тип</legend>
-          <div class="nazakaz__tip">
+          <div class="orderform__tip">
             <input id="interior" type="radio" checked>
             <label for="interior">Аксессуар для интерьера</label>
             <input id="toy" type="radio">
@@ -43,7 +43,7 @@
         </fieldset>
         <fieldset>
           <legend>Цвет</legend>
-          <div class="nazakaz__color">
+          <div class="orderform__color">
             <input id="white" type="checkbox" checked>
             <label for="white">Белый</label>
             <input id="grey" type="checkbox"  checked>
@@ -60,38 +60,38 @@
         </fieldset>
         <fieldset>
           <legend>ФИО</legend>
-          <div class="nazakaz__name">
+          <div class="orderform__name">
             <label for="name">Имя:</label>
             <input id="name" type="text" placeholder="Введите ваше имя" required>
           </div>
-          <div class="nazakaz__family">
+          <div class="orderform__family">
             <label for="family">Фамилия:</label>
             <input id="family" type="text" placeholder="Укажите фамилию"  required>
           </div>
-          <div class="nazakaz__otchestvo">
-            <label for="otchestvo">Отчество:</label>
-            <input id="otchestvo" type="text" placeholder="Отчество, если желаете">
+          <div class="orderform__secondname">
+            <label for="secondname">Отчество:</label>
+            <input id="secondname" type="text" placeholder="Отчество, если желаете">
           </div>
         </fieldset>
         <fieldset>
           <legend>Тел</legend>
-          <div class="nazakaz__tel">
+          <div class="orderform__tel">
             <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>
           </div>
         </fieldset>
         <fieldset>
           <legend>E-mail</legend>
-          <div class="nazakaz__email">
+          <div class="orderform__email">
             <input id="email" type="email" placeholder="Ваш Email" required>
           </div>
         </fieldset>
         <fieldset>
           <legend>Доп</legend>
-          <div class="nazakaz__dop">
+          <div class="orderform__dop">
             <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
         </fieldset>
-        <p class="nazakaz__zametka">Все поля обязательны для заполнения</p>
+        <p class="orderform__zametka">Все поля обязательны для заполнения</p>
         <input type="submit" class="btn btn--order" value="Отправить заказ">
       </form>
     </section>
