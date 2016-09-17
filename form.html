@@ -9,108 +9,116 @@
   <body>
     <!-- top menu, mobile menu -->
     <header class="topmenu">
-      <div class="topmenu__logo">
-        <a href=""><img src="img/logo-mobile.svg" width="85" height="35"></a>
-      </div>
-      <nav class="topnav  topnav--closed">
-        <button class="topnav__toggle" type="button">
-          <img src="img/icon-menu-open.svg" width="20" height="14">
-        </button>
-        <div class="topnav__wrapper">
-          <ul class="topnav__menu">
-            <li class="topnav__item"><a href="">Каталог товаров</a></li>
-            <li class="topnav__item"><a href="">Вязание на заказ</a></li>
-          </ul>
-          <ul class="topnav__user">
-            <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
-            <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
-          </ul>
+      <div class="topmenu__wrapper">
+        <div class="topmenu__logo">
+          <a href=""><img src="img/logo-mobile.svg" width="85" height="35"></a>
         </div>
-      </nav>
+        <nav class="topnav  topnav--closed">
+          <button class="topnav__toggle" type="button">
+            <img src="img/icon-menu-open.svg" width="20" height="14">
+          </button>
+          <div class="topnav__wrapper">
+            <ul class="topnav__menu">
+              <li class="topnav__item"><a href="">Каталог товаров</a></li>
+              <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+            </ul>
+            <ul class="topnav__user">
+              <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
+              <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- header -->
-    <section class="pagebanner pagebanner--page">
-      <h1 class="pagebanner__title">Вязание на заказ</h1>
+    <section class="pagebanner">
+      <div class="pagebanner__wrapper pagebanner--page">
+       <h1 class="pagebanner__title">Вязание на заказ</h1>
+      </div>
     </section>
     <!-- form -->
     <section class="orderform">
-      <small class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</small>
-      <form class="orderform__form">
-        <fieldset>
-          <legend>Тип</legend>
-          <div class="orderform__tip">
-            <input id="interior" type="radio" checked>
-            <label for="interior">Аксессуар для интерьера</label>
-            <input id="toy" type="radio">
-            <label for="toy">Детская игрушка</label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Цвет</legend>
-          <div class="orderform__color">
-            <input id="white" type="checkbox" checked>
-            <label for="white">Белый</label>
-            <input id="grey" type="checkbox"  checked>
-            <label for="grey">Серый</label>
-            <input id="tiffani" type="checkbox">
-            <label for="tiffani">«Тиффани»</label>
-            <input id="black" type="checkbox">
-            <label for="black">Черный</label>
-            <input id="pink" type="checkbox">
-            <label for="pink">Розовый</label>
-            <input id="orange" type="checkbox">
-            <label for="orange">Оранжевый</label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>ФИО</legend>
-          <div class="orderform__name">
-            <label for="name">Имя:</label>
-            <input id="name" type="text" placeholder="Введите ваше имя" required>
-          </div>
-          <div class="orderform__family">
-            <label for="family">Фамилия:</label>
-            <input id="family" type="text" placeholder="Укажите фамилию"  required>
-          </div>
-          <div class="orderform__secondname">
-            <label for="secondname">Отчество:</label>
-            <input id="secondname" type="text" placeholder="Отчество, если желаете">
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Тел</legend>
-          <div class="orderform__tel">
-            <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>E-mail</legend>
-          <div class="orderform__email">
-            <input id="email" type="email" placeholder="Ваш Email" required>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Доп</legend>
-          <div class="orderform__dop">
-            <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
-          </div>
-        </fieldset>
-        <p class="orderform__zametka">Все поля обязательны для заполнения</p>
-        <button type="button" class="btn btn--order" >Отправить заказ</button>
-      </form>
+      <div class="orderform__wrapper">
+        <small class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</small>
+        <form class="orderform__form">
+          <fieldset>
+            <legend>Тип</legend>
+            <div class="orderform__tip">
+              <input id="interior" type="radio" checked>
+              <label for="interior">Аксессуар для интерьера</label>
+              <input id="toy" type="radio">
+              <label for="toy">Детская игрушка</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+            <div class="orderform__color">
+              <input id="white" type="checkbox" checked>
+              <label for="white">Белый</label>
+              <input id="grey" type="checkbox"  checked>
+              <label for="grey">Серый</label>
+              <input id="tiffani" type="checkbox">
+              <label for="tiffani">«Тиффани»</label>
+              <input id="black" type="checkbox">
+              <label for="black">Черный</label>
+              <input id="pink" type="checkbox">
+              <label for="pink">Розовый</label>
+              <input id="orange" type="checkbox">
+              <label for="orange">Оранжевый</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>ФИО</legend>
+            <div class="orderform__name">
+              <label for="name">Имя:</label>
+              <input id="name" type="text" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="orderform__family">
+              <label for="family">Фамилия:</label>
+              <input id="family" type="text" placeholder="Укажите фамилию"  required>
+            </div>
+            <div class="orderform__secondname">
+              <label for="secondname">Отчество:</label>
+              <input id="secondname" type="text" placeholder="Отчество, если желаете">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Тел</legend>
+            <div class="orderform__tel">
+              <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>E-mail</legend>
+            <div class="orderform__email">
+              <input id="email" type="email" placeholder="Ваш Email" required>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Доп</legend>
+            <div class="orderform__dop">
+              <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+            </div>
+          </fieldset>
+          <p class="orderform__zametka">Все поля обязательны для заполнения</p>
+          <button type="button" class="btn btn--order" >Отправить заказ</button>
+        </form>
+      </div>
     </section>
     <!-- footer -->
     <footer class="pagefooter">
-      <div class="pagefooter__social">
-        <p class="sociallinks">
-          <a class="sociallink sociallink--in" href=""></a>
-          <a class="sociallink sociallink--fb" href=""></a>
-          <a class="sociallink sociallink--tw" href=""></a>
-        </p>
-      </div>
-      <div class="pagefooter__copyright">
-        Разработано:
-        <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="40" alt="HTML Academy"></a>
+      <div class="pagefooter__wrapper">
+        <div class="pagefooter__social">
+          <p class="sociallinks">
+            <a class="sociallink sociallink--in" href=""></a>
+            <a class="sociallink sociallink--fb" href=""></a>
+            <a class="sociallink sociallink--tw" href=""></a>
+          </p>
+        </div>
+        <div class="pagefooter__copyright">
+          Разработано:
+          <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="40" alt="HTML Academy"></a>
+        </div>
       </div>
     </footer>
   </body>
