@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка. Форма</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- top menu, mobile menu -->
     <header class="topmenu">
       <div class="topmenu__logo">
-        <a href=""><img src="http://placehold.it/100x75"></a>
+        <a href=""><img src="img/logo-mobile.svg" width="85" height="35"></a>
       </div>
       <nav class="topnav  topnav--closed">
-        <button class="topnav__toggle" type="button"></button>
+        <button class="topnav__toggle" type="button">
+          <img src="img/icon-menu-open.svg" width="20" height="14">
+        </button>
         <div class="topnav__wrapper">
           <ul class="topnav__menu">
             <li class="topnav__item"><a href="">Каталог товаров</a></li>
@@ -30,7 +34,7 @@
     </section>
     <!-- form -->
     <section class="orderform">
-      <p class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <small class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</small>
       <form class="orderform__form">
         <fieldset>
           <legend>Тип</legend>
@@ -92,7 +96,7 @@
           </div>
         </fieldset>
         <p class="orderform__zametka">Все поля обязательны для заполнения</p>
-        <input type="submit" class="btn btn--order" value="Отправить заказ">
+        <button type="button" class="btn btn--order" >Отправить заказ</button>
       </form>
     </section>
     <!-- footer -->
@@ -106,7 +110,7 @@
       </div>
       <div class="pagefooter__copyright">
         Разработано:
-        <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="40" alt="HTML Academy"></a>
       </div>
     </footer>
   </body>

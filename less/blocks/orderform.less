@@ -1,0 +1,45 @@
+.orderform {
+  
+  margin: 30px 30px 0px;
+  
+  fieldset {
+    border-top: solid 1px @maincolor;
+    padding-left: 0px;
+  }
+  
+  legend {
+    .granttext();
+    color:@maincolor;
+  }
+  
+  label {
+    .boldtext();
+    .blacktext();
+  }
+  
+  input {
+    font-size: 17px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    
+    &::placeholder {
+      color: @fadecolor;
+    } 
+    
+  }
+  
+  textarea {
+    font-size: 17px;
+    border: 2px solid #444444;
+    
+    &::placeholder {
+      color: @fadecolor;
+    } 
+    
+  }
+  
+  &__zametka {
+    font-size: 14px;
+  }
+  
+}
