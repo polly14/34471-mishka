@@ -1,0 +1,47 @@
+.otdel {
+  .boldtext(19px);
+  color: #ffffff;
+  line-height: 24px;
+  
+  &__wrapper {
+    
+  }
+  
+  & ul {
+    .defaultli();
+  }
+  
+  &__item {
+    position: relative;
+  }
+  
+  &__item a {
+    display: block;
+    height: 75px;
+    padding: 25px 0px 0px;
+    margin: 0px 30px;
+    vertical-align: middle;
+    line-height: 24px;
+    color: #ffffff;
+    white-space: pre-line;
+  }
+      
+}
+
+.otdel__item--interior {  
+  background-color: @maincolor; 
+  
+  & a {
+    background: url("../img/icon-interior.svg") right center no-repeat;
+  }
+  
+}
+
+.otdel__item--toys {
+  background-color: #56c3b2;
+  
+  & a {
+    background: url("../img/icon-toy.svg") right center no-repeat;
+  }
+  
+}

@@ -1,0 +1,38 @@
+.reviews {
+  
+  & blockquote {
+    line-height: 30px;
+  }
+  
+  &__prev {
+    .greyborder();
+    background: #ffffff url("../img/icon-left-arrow.svg") center no-repeat;
+    border-width: 1px;
+    height: 50px;
+    width: 128px;
+  }
+  
+  &__next {
+    .greyborder();
+    background: #ffffff url("../img/icon-right-arrow.svg") center no-repeat;
+    border-width: 1px;
+    height: 50px;
+    width: 128px;
+  }
+  
+  &__avtor {
+    .blacktext();    
+    .boldtext(18px);
+    line-height: 24px;
+    font-style:normal;
+    
+    & span {
+      color: @color;
+      font-size: 15px;
+      line-height: 30px;
+      font-weight: normal;
+    }    
+    
+  }
+  
+}

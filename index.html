@@ -3,127 +3,155 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- top menu, mobile menu -->
     <header class="topmenu">
-      <div class="topmenu__logo">
-        <img src="http://placehold.it/100x75">
-      </div>
-      <nav class="topnav  topnav--closed">
-        <button class="topnav__toggle" type="button"></button>
-        <div class="topnav__wrapper">
-          <ul class="topnav__menu">
-            <li class="topnav__item"><a href="">Каталог товаров</a></li>
-            <li class="topnav__item"><a href="">Вязание на заказ</a></li>
-          </ul>
-          <ul class="topnav__user">
-            <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
-            <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
-          </ul>
+      <div class="topmenu__wrapper">
+        <div class="topmenu__logo">
+          <img src="img/logo-mobile.svg" width="85" height="35">
         </div>
-      </nav>
+        <nav class="topnav  topnav--closed">
+          <button class="topnav__toggle" type="button"></button>
+          <div class="topnav__wrapper">
+            <ul class="topnav__menu">
+              <li class="topnav__item"><a href="">Каталог товаров</a></li>
+              <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+            </ul>
+            <ul class="topnav__user">
+              <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
+              <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- header -->
-    <section class="pagebanner pagebanner--main">
-      <h1 class="pagebanner__title">Милые штуки ручной работы для дома</h1>
+    <section class="pagebanner">
+      <div class="pagebanner__wrapper pagebanner--main">
+        <h1 class="pagebanner__title">Милые штуки
+          ручной
+          работы для дома</h1>
+      </div>
     </section>
     <section class="otdel">
-      <div class="otdel__item otdel__item--interior">Предметы интерьера</div>
-      <div class="otdel__item otdel__item--toys">Детские игрушки</div>
+      <div class="otdel__wrapper">
+        <ul>
+          <li class="otdel__item otdel__item--interior"><a href="">Предметы
+            интерьера</a></li>
+          <li class="otdel__item otdel__item--toys"><a href="">Детские
+            игрушки</a></li>
+        </ul>
+      </div>
     </section>
     <!-- featured -->
     <article class="featured">
-      <h3 class="featured__title"><a href="">Вязаные корзинки</a></h3>
-      <div class="featured__marker">Товар недели</div>
-      <div class="featured__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</div>
-      <table class="featured__characts">
-        <tr>
-          <td class="featured__char">Цвет:</td>
-          <td class="featured__value">«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td class="featured__char">Диаметр:</td>
-          <td class="featured__value">25 см</td>
-        </tr>
-        <tr>
-          <td class="featured__char">Высота:</td>
-          <td class="featured__value">15 см</td>
-        </tr>
-      </table>
-      <div class="featured__img">
-        <a href=""><img src="http://placehold.it/260x315"></a>
+      <div class="featured__wrapper">
+        <h2 class="featured__title">Вязаные корзинки</h2>
+        <div class="featured__marker">Товар недели</div>
+        <p class="featured__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="featured__characts">
+          <tr>
+            <td class="featured__char">Цвет:</td>
+            <td class="featured__value">«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td class="featured__char">Диаметр:</td>
+            <td class="featured__value">25 см</td>
+          </tr>
+          <tr>
+            <td class="featured__char">Высота:</td>
+            <td class="featured__value">15 см</td>
+          </tr>
+        </table>
+        <div class="featured__img">
+          <a href=""><img src="img/triple-set-mobile@1x.jpg" width="260" height="315"></a>
+        </div>
+        <div class="featured__price">Цена: 990 руб.</div>
+        <button class="btn btn--order" type="button">Заказать</button>
       </div>
-      <div class="featured__price">990 руб.</div>
-      <button class="btn btn--order" type="button">Заказать</button>
     </article>
     <!-- about -->
     <section class="about">
-      <h2 class="about__title">Коротко о нас</h2>
-      <div class="about__list">
-        <div class="about__item about__item--ecol">Экологически чистые материалы</div>
-        <div class="about__item about__item--scand">Скандинавский стиль по российской цене</div>
-        <div class="about__item about__item--like">Увеличивает лайки на фотографиях</div>
-        <div class="about__item about__item--hand">Связано вручную с любовью и умилениями</div>
-        <div class="about__item about__item--rus">Поддержка отечественного производителя</div>
-        <div class="about__item about__item--gift">Поставляется в подарочной упаковке</div>
+      <div class="about__wrapper">
+        <section class="about__block">
+          <h2 class="about__title">Коротко о нас:</h2>
+          <div class="about__list">
+            <div class="about__item about__item--ecol">Экологически чистые материалы</div>
+            <div class="about__item about__item--scand">Скандинавский стиль по российской цене</div>
+            <div class="about__item about__item--like">Увеличивает лайки на фотографиях</div>
+            <div class="about__item about__item--hand">Связано вручную с любовью и умилениями</div>
+            <div class="about__item about__item--rus">Поддержка отечественного производителя</div>
+            <div class="about__item about__item--gift">Поставляется в подарочной упаковке</div>
+          </div>
+        </section>
+        <section class="reviews">
+          <h2 class="reviews__title">Отзывы</h2>
+          <article class="reviews__item">
+            <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</blockquote>
+            <cite class="reviews__avtor">Анастасия Красильникова<br><span>@misssssiskras</span></cite>
+          </article>
+          <button class="reviews__prev" type="button"></button>
+          <button class="reviews__next" type="button"></button>
+          <button class="btn btn--reviews" type="button">Написать</button>
+        </section>
       </div>
-    </section>
-    <section class="reviews">
-      <h2 class="reviews__title">Отзывы</h2>
-      <article class="reviews__item">
-        <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</blockquote>
-        <cite class="reviews__avtor">Анастасия Красильникова<br><span>@misssssiskras</span></cite>
-      </article>
-      <button class="reviews__prev" type="button"></button>
-      <button class="reviews__next" type="button"></button>
-      <button class="btn btn--reviews" type="button">Написать</button>
     </section>
     <!-- contacts -->
     <section class="contact">
-      <h4 class="contact__title">Контакты</h4>
-      <table class="contact__info">
-        <tr>
-          <td class="contact__item">e-mail:</td>
-          <td class="contact__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-        </tr>
-        <tr>
-          <td class="contact__item">адрес:</td>
-          <td class="contact__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-        </tr>
-      </table>
-      <div class="contact__map"></div>
-      <button class="btn btn--pismo" type="button">Напишите нам</button>
+      <div class="contact__wrapper">
+        <h4 class="contact__title">Контакты</h4>
+        <table class="contact__info">
+          <tr>
+            <td class="contact__item">e-mail:</td>
+            <td class="contact__value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+          </tr>
+          <tr>
+            <td class="contact__item">адрес:</td>
+            <td class="contact__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          </tr>
+        </table>
+        <div class="contact__map"></div>
+        <button class="btn btn--pismo" type="button">Напишите нам</button>
+      </div>
     </section>
     <!-- footer -->
     <footer class="pagefooter">
-      <div class="pagefooter__social">
-        <p class="sociallinks">
-          <a class="sociallink sociallink--in" href=""></a>
-          <a class="sociallink sociallink--fb" href=""></a>
-          <a class="sociallink sociallink--tw" href=""></a>
-        </p>
-      </div>
-      <div class="pagefooter__copyright">
-        Разработано:
-        <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru">HTML Academy</a>
+      <div class="pagefooter__wrapper">
+        <div class="pagefooter__social">
+          <p class="sociallinks">
+            <a class="sociallink sociallink--in" href=""></a>
+            <a class="sociallink sociallink--fb" href=""></a>
+            <a class="sociallink sociallink--tw" href=""></a>
+          </p>
+        </div>
+        <div class="pagefooter__copyright">
+          Разработано:
+          <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="40" alt="HTML Academy"></a>
+        </div>
       </div>
     </footer>
     <!-- modal -->
     <section class="addtocart">
-      <h4 class="addtocart__title">Добавить в корзину</h4>
-      <form class="addtocart__form">
-        <div class="addtocart__size">
-          <label>Выберите размер:</label>
-          <input id="checkbox-s" type="checkbox" checked>
-          <label for="checkbox-s">S</label>
-          <input id="checkbox-m" type="checkbox">
-          <label for="checkbox-m">M</label>
-          <input id="checkbox-l" type="checkbox" >
-          <label for="checkbox-l">L</label>
-        </div>
-        <button class="btn btn--addtocart">Добавить</button>
-      </form>
+      <div class="addtocart__wrapper">
+        <h2 class="addtocart__title">Добавить в корзину</h2>
+        <form class="addtocart__form">
+          <div class="addtocart__sizesblock">
+            <label class="addtocart__vr">Выберите размер:</label>
+            <div class="addtocart__sizes">
+              <input id="checkbox-s" type="checkbox" checked>
+              <label for="checkbox-s">S</label>
+              <input id="checkbox-m" type="checkbox">
+              <label for="checkbox-m">M</label>
+              <input id="checkbox-l" type="checkbox" >
+              <label for="checkbox-l">L</label>
+            </div>
+          </div>
+          <button class="btn btn--addtocart">Добавить</button>
+        </form>
+      </div>
     </section>
   </body>
 </html>
