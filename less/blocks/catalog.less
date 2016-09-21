@@ -1,7 +1,9 @@
 .catalog {
   
   &__wrapper {
-    padding: 0px 30px;
+    .clearfix();
+    width: 260px;
+    margin: 0px auto;
   }
       
 }
@@ -21,5 +23,21 @@
   &__user {
     border-top: 1px solid @greyborder;
   }
+  
+}
+
+@media @tablet-widths {
+  
+  .catalog {
+  
+    &__wrapper {
+    .container();
+    }
+    
+  }
+  
+}
+
+@media @desktop-widths {
   
 }

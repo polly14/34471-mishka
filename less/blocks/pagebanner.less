@@ -1,10 +1,16 @@
 .pagebanner {
   
   background-color: @greyback;
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
   
   &__wrapper {
     text-align: center;
-    padding: 70px 30px;
+    padding: 70px 0px;
+    .container();
+    .clearfix();
   }
   
   &__title {
@@ -13,7 +19,64 @@
   
 }
 
+.pagebanner--mainbg {
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") center -20px no-repeat;
+}
+
 .pagebanner--main {
-  background:@greyback url("../img/hero-mobile@1x.jpg") center -20px no-repeat;
   height: 140px;
+}
+
+@media @tablet-widths {
+  
+  .pagebanner {
+    
+    &::before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 100%;
+      bottom:-5px;
+      left:0px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+      background-size: contain;
+      z-index: 2;
+    }
+    
+    &__wrapper {
+      padding: 140px 0px;
+    }
+    
+    &__title {
+    white-space:normal;
+    }
+    
+  }
+  
+  .pagebanner--mainbg {
+    background: #f9f9f9 url("../img/hero-desktop.jpg") center -20px no-repeat;
+   }
+  
+  .pagebanner--main {
+    height: 330px;
+  }
+  
+}
+
+@media @desktop-widths {
+  
+  .pagebanner {
+    
+    &::before {
+      height: 34px;
+      background-size: contain;
+      z-index: 2;
+    }
+    
+    &__title {
+      padding: 0px 150px;
+    }
+    
+  }
+  
 }

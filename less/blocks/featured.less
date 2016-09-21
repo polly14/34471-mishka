@@ -1,7 +1,9 @@
 .featured {
   
-  &__wrapper {  
-    margin:0px 30px;
+  &__wrapper {
+    .clearfix();
+    width: 260px;
+    margin: 0px auto;
   }
   
   &__marker {
@@ -27,5 +29,20 @@
     }
     
   }
+  
+}
+
+@media @tablet-widths {
+  
+  .featured {
+  
+    &__wrapper {
+      .container();  
+    }
+  }
+  
+}
+
+@media @desktop-widths {
   
 }
