@@ -1,7 +1,9 @@
 .contact {  
   
   &__wrapper {
-    margin:30px 30px 0px;
+    .clearfix();
+    width: 260px;
+    margin: 0px auto;
     line-height: 30px;
   }
   
@@ -9,5 +11,21 @@
     border-bottom: 1px solid @maincolor;
     color: @color;
   }
+  
+}
+
+@media @tablet-widths {
+  
+  .contact {
+    
+    &__wrapper {
+    .container();
+    }
+    
+  }
+  
+}
+
+@media @desktop-widths {
   
 }

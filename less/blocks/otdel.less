@@ -1,14 +1,13 @@
 .otdel {
+  background: #f9f9f9;
   .boldtext(19px);
   color: #ffffff;
   line-height: 24px;
+  position: relative;
   
   &__wrapper {
-    
-  }
-  
-  & ul {
-    .defaultli();
+    .container();
+    .clearfix();
   }
   
   &__item {
@@ -18,10 +17,9 @@
   &__item a {
     display: block;
     height: 75px;
-    padding: 25px 0px 0px;
-    margin: 0px 30px;
+    padding: 25px 30px 0px;
+    margin: 0px;
     vertical-align: middle;
-    line-height: 24px;
     color: #ffffff;
     white-space: pre-line;
   }
@@ -31,7 +29,13 @@
 .otdel__item--interior {  
   background-color: @maincolor; 
   
-  & a {
+  & a::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top:25px;
+    right:39px;
     background: url("../img/icon-interior.svg") right center no-repeat;
   }
   
@@ -40,8 +44,57 @@
 .otdel__item--toys {
   background-color: #56c3b2;
   
-  & a {
+  & a::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top:25px;
+    right:30px;
     background: url("../img/icon-toy.svg") right center no-repeat;
   }
+  
+}
+
+@media @tablet-widths {
+  
+  .otdel {
+    
+    .boldtext(20px);
+    line-height: 30px;
+    
+    &__item {
+      width: 50%;
+    }
+    
+    &__item a {
+      height: 95px;
+      padding: 30px 35px 5px;      
+    }
+    
+  }
+  
+  .otdel__item--interior {
+    float: left;
+  }
+  
+  .otdel__item--toys {
+    float: right;
+  }
+  
+}
+
+@media @desktop-widths {
+  
+  .otdel {
+    
+    &__item a {
+      height: 95px;
+      padding: 30px 35px 15px;      
+    }
+    
+  }
+  
+  
   
 }

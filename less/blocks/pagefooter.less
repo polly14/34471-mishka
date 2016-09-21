@@ -2,15 +2,32 @@
   background-color: @greyback;
   
   &__wrapper {
-    padding: 20px 30px;
+    width: 260px;
+    margin: 0px auto;
+    .clearfix();    
   }
   
   &__copyright {
-    margin: 0px 30px;
+    margin: 0px;
     .boldtext(19px);
     line-height: 18px;
     .blacktext();
     border-top: #e5e5e5 solid 1px;
   }
+  
+}
+
+@media @tablet-widths {
+  
+  .pagefooter {
+    
+    &__wrapper {
+      .container();    
+    }
+  }
+  
+}
+
+@media @desktop-widths {
   
 }

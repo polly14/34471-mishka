@@ -1,7 +1,25 @@
 .video {
   
   &__wrapper {
-    padding: 0px 30px;
-  }  
+    .clearfix();
+    width: 260px;
+    margin: 0px auto;
+  } 
+  
+}
+
+@media @tablet-widths {
+  
+  .video {
+  
+    &__wrapper {
+    .container();
+    }
+    
+  }
+  
+}
+
+@media @desktop-widths {
   
 }
