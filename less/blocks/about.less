@@ -8,15 +8,83 @@
   &__wrapper {
     .clearfix();
     width: 260px;
-    margin: 0px auto;
+    margin: 30px auto;
+  }
+  
+  &__list {
+    padding-top: 15px;
+    padding-bottom: 30px;
   }
   
   &__item {
     .boldtext();
     .blacktext();
     line-height: 20px;
+    padding-top: 60px;
+    padding-bottom: 24px;
+    position: relative;
   }
   
+}
+
+.about__item--ecol::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-1.svg") left top no-repeat;
+}
+
+.about__item--scand::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-3.svg") left top no-repeat;
+}
+
+.about__item--like::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-5.svg") left top no-repeat;
+}
+
+.about__item--hand::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-2.svg") left top no-repeat;
+}
+
+.about__item--rus::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-4.svg") left top no-repeat;
+}
+
+.about__item--gift::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 55px;
+  height: 60px;
+  background: url("../img/icon-feature-6.svg") left top no-repeat;
 }
 
 @media @tablet-widths {
@@ -30,11 +98,45 @@
       .container();  
     }
     
-    &__item {
-    .boldtext(20px);
-    line-height: 24px;
-  }
+    &__title {
+      margin: 50px 0px 25px;
+    }
     
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    &__item {
+      .boldtext(20px);
+      line-height: 24px;
+      width: 50%;
+    }
+    
+  }
+  
+  .about__item--ecol {
+    order:0;
+  }
+  
+  .about__item--hand {
+    order:1;
+  }
+  
+  .about__item--scand {
+    order:2;
+  }
+  
+  .about__item--rus {
+    order:3;
+  }
+  
+  .about__item--like {
+    order:4;
+  }
+  
+  .about__item--gift {
+    order:5;
   }
   
 }
@@ -43,8 +145,16 @@
   
   .about {
     
-    border-width: 20px 0px 20px;
+    border-width: 24px 0px 24px;
     border-image: url("../img/zigzag-line-desktop.svg") 23 0 27 fill repeat stretch;
+    
+    &__title {
+      margin: 50px 175px 25px;
+    }
+    
+    &__list {
+      margin: 0px 175px;
+    }
     
   }
   

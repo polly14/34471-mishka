@@ -1,17 +1,77 @@
-.contact {  
+.contact {
+  
+  &__wrapper {
+    margin: 0px auto;
+    width: 260px;
+  }
+  
+  &__map {
+    position: relative;
+  }
+  
+  &__map2 {
+    position: absolute;
+    top: 30px;
+    left:-30px;
+    width: 320px;
+    height: 457px;
+    background: url("../img/map-mobile@1x.jpg") top left no-repeat;
+    z-index: 1;
+    
+    
+    &::after {
+      position: absolute;
+      content: "";
+      width: 66px;
+      height: 101px;
+      top:170px;
+      left:120px;
+      background: url("../img/map-pin.svg") top left no-repeat;
+      z-index: 1;
+      
+    }
+    
+  }
+  
+  &__map3 {
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 10;
+    width: 320px;
+    height: 457px;
+    
+  }
   
   &__wrapper {
     .clearfix();
     width: 260px;
-    margin: 0px auto;
+    margin: 30px auto 40px;
     line-height: 30px;
+  }
+  
+  &__info {
+    
+    td {
+      vertical-align: top;
+      min-width: 65px;
+      padding-top: 25px;
+    }
+    
   }
   
   &__value a {
     border-bottom: 1px solid @maincolor;
     color: @color;
+    padding-bottom: 5px;
   }
   
+}
+
+
+
+.btn--pismo {
+  margin-top: 525px;
 }
 
 @media @tablet-widths {
@@ -19,13 +79,160 @@
   .contact {
     
     &__wrapper {
-    .container();
+      .container();
+      margin: 70px auto 65px;
+      position: relative;
+      
+      &::before {
+        position: absolute;
+        content: "";
+        width: 47px;
+        height: 85px;
+        right: 0px;
+        top: -20px;
+        background: url("../img/icon-flag.svg") top left no-repeat;
+      }
+      
+    }
+    
+    &__title {
+      margin-bottom: 10px;
+    }
+    
+    &__info {
+      font-size: 17px;
+      
+      & tr {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 40px;
+      }
+      
+    }
+    
+    &__value br:nth-child(2) {
+      display: none;
+    }
+    
+    &__map2 {
+      top: 50px;
+      left:-50px;
+      width: 768px;
+      height: 457px;
+      background: url("../img/map-tablet.jpg") top left no-repeat;
+      z-index: 1;
+    
+      &::after {
+        position: absolute;
+        content: "";
+        width: 66px;
+        height: 101px;
+        top:170px;
+        left:340px;
+        background: url("../img/map-pin.svg") top left no-repeat;
+        
+      }
+    
+    }
+    
+     &__map3 {
+      z-index: 2;
+      width: 768px;
+      height: 457px;
+    }
+    
+    &__btn {
+      display: flex;
+      align-items: center;
     }
     
   }
   
+.btn--pismo {
+  margin-top: 555px ;
+  width: 230px;
+  
+}  
+  
 }
 
 @media @desktop-widths {
+  
+  .contact {
+    
+    &__wrapper {
+      .container();
+      margin: 70px auto 100px;
+      position: relative;
+      
+      &::before {
+        position: absolute;
+        content: "";
+        width: 47px;
+        height: 85px;
+        right: auto;
+        left: 0px;
+        top: -20px;
+        background: url("../img/icon-flag.svg") top left no-repeat;
+      }
+      
+    }
+    
+    &__title {
+      margin:150px 0px 10px 175px;
+    }
+    
+    &__info {
+      margin-left: 175px;
+      
+      & tr {
+        display: table-row;  
+      }
+      
+    }
+    
+    &__value br:nth-child(2) {
+      display: none;
+    }
+    
+    &__map2 {
+      top: -320px;
+      left:auto;
+      right: 0px;
+      width: 525px;
+      height: 457px;
+      background: url("../img/map.jpg") top left no-repeat;
+      z-index: 1;
+    
+      &::after {
+        position: absolute;
+        content: "";
+        width: 66px;
+        height: 101px;
+        top:170px;
+        left:250px;
+        background: url("../img/map-pin.svg") top left no-repeat;
+        
+      }
+    
+    }
+    
+     &__map3 {
+      z-index: 2;
+      width: 525px;
+      height: 457px;
+    }
+    
+    &__btn {
+      display: block;      
+    }
+    
+  }
+  
+.btn--pismo {
+  margin: 85px 0px 0px 175px;
+  width: 230px;
+  
+}
   
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка. Форма</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -11,18 +12,25 @@
     <header class="topmenu">
       <div class="topmenu__wrapper">
         <div class="topmenu__logo">
-          <a href=""><img src="img/logo-mobile.svg" width="85" height="35"></a>
+          <a href="index.html"><img src="img/logo-mobile.svg" width="85" height="35"></a>
         </div>
-        <nav class="topnav  topnav--closed">
+        <nav class="topnav  topnav--closed  topnav--nojs">
           <button class="topnav__toggle" type="button"></button>
           <div class="topnav__wrapper">
             <ul class="topnav__menu">
-              <li class="topnav__item"><a href="">Каталог товаров</a></li>
-              <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+              <li class="topnav__item"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="topnav__item  topnav__item--active"><a>Вязание на заказ</a></li>
             </ul>
             <ul class="topnav__user">
               <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
               <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+            </ul>
+            <ul class="topnav__newsale">
+              <li  class="topnav__item"><a href="">Новые поступления</a></li>
+              <li  class="topnav__item"><a href="">Распродажа</a></li>
+            </ul>
+            <ul class="topnav__delivery">
+              <li  class="topnav__item  topnav__item--delivery">Бесплатная доставка по России</li>
             </ul>
           </div>
         </nav>
@@ -36,76 +44,109 @@
     </section>
     <!-- form -->
     <section class="orderform">
-      <div class="orderform__wrapper">
+      <div class="orderform__wrapper">        
         <small class="orderform__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</small>
         <form class="orderform__form">
-          <fieldset>
-            <legend>Тип</legend>
-            <div class="orderform__tip">
-              <input id="interior" type="radio" checked>
-              <label for="interior">Аксессуар для интерьера</label>
-              <input id="toy" type="radio">
-              <label for="toy">Детская игрушка</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Цвет</legend>
-            <div class="orderform__color">
-              <input id="white" type="checkbox" checked>
-              <label for="white">Белый</label>
-              <input id="grey" type="checkbox"  checked>
-              <label for="grey">Серый</label>
-              <input id="tiffani" type="checkbox">
-              <label for="tiffani">«Тиффани»</label>
-              <input id="black" type="checkbox">
-              <label for="black">Черный</label>
-              <input id="pink" type="checkbox">
-              <label for="pink">Розовый</label>
-              <input id="orange" type="checkbox">
-              <label for="orange">Оранжевый</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>ФИО</legend>
-            <div class="orderform__name">
-              <label for="name">Имя:</label>
-              <input id="name" type="text" placeholder="Введите ваше имя" required>
-            </div>
-            <div class="orderform__family">
-              <label for="family">Фамилия:</label>
-              <input id="family" type="text" placeholder="Укажите фамилию"  required>
-            </div>
-            <div class="orderform__secondname">
-              <label for="secondname">Отчество:</label>
-              <input id="secondname" type="text" placeholder="Отчество, если желаете">
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Тел</legend>
-            <div class="orderform__tel">
-              <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>E-mail</legend>
-            <div class="orderform__email">
-              <input id="email" type="email" placeholder="Ваш Email" required>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Доп</legend>
-            <div class="orderform__dop">
-              <textarea id="dop" name="dop" rows="3" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
-            </div>
-          </fieldset>
-          <p class="orderform__zametka">Все поля обязательны для заполнения</p>
-          <button type="button" class="btn btn--order" >Отправить заказ</button>
-        </form>
+          <div class="orderform__f1">
+            <fieldset>            
+              <legend>Тип</legend>
+              <div class="orderform__tip">
+                <div class="orderform__field">
+                  <input id="interior" type="radio" name="radio" checked>
+                  <label for="interior">Аксессуар для интерьера</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="toy" type="radio" name="radio">
+                  <label for="toy">Детская игрушка</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="orderform__f2">
+            <fieldset>            
+              <legend>Цвет</legend>
+              <div class="orderform__color">
+                <div class="orderform__field">
+                  <input id="white" type="checkbox" checked>
+                  <label for="white">Белый</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="grey" type="checkbox"  checked>
+                  <label for="grey">Серый</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="tiffani" type="checkbox">
+                  <label for="tiffani">«Тиффани»</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="black" type="checkbox">
+                  <label for="black">Черный</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="pink" type="checkbox">
+                  <label for="pink">Розовый</label>
+                </div>
+                <div class="orderform__field">
+                  <input id="orange" type="checkbox">
+                  <label for="orange">Оранжевый</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+          <div class="orderform__f3">
+            <fieldset>            
+              <legend>ФИО</legend>
+              <div class="orderform__pers">
+                <div class="orderform__name">
+                  <label for="name">Имя:</label>
+                  <input id="name" type="text" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="orderform__family">
+                  <label for="family">Фамилия:</label>
+                  <input id="family" type="text" placeholder="Укажите фамилию"  required>
+                </div>
+                <div class="orderform__secondname">
+                  <label for="secondname">Отчество:</label>
+                  <input id="secondname" type="text" placeholder="Отчество, если желаете">
+                </div>
+              </div>
+            </fieldset>
+          </div>          
+          <div class="orderform__f4">
+            <fieldset>            
+              <legend>Тел</legend>
+              <div class="orderform__tel">
+                <label for="tel"></label>
+                <input id="tel" type="text" placeholder="+7 ХХХ ХХ ХХ" required>
+              </div>
+            </fieldset>          
+            <fieldset>            
+              <legend>E-mail</legend>
+              <div class="orderform__email">
+                <label for="email"></label>
+                <input id="email" type="email" placeholder="Ваш Email" required>
+              </div>
+            </fieldset>
+          </div>
+          <div class="orderform__f5">
+            <fieldset>
+              <legend>Доп</legend>
+                <div class="orderform__dop">
+                  <textarea id="dop" name="dop" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+                </div>
+            </fieldset>
+          </div>
+          <div class="orderform__send">
+            <p class="orderform__zametka">Все поля обязательны для заполнения</p>
+            <button type="button" class="btn btn--send" >Отправить заказ</button>
+          </div>
+        </form>        
       </div>
     </section>
     <!-- footer -->
     <footer class="pagefooter">
       <div class="pagefooter__wrapper">
+        <div class="pagefooter__logo"><img src="img/logo-mobile.svg" width="85" height="35"></div>
         <div class="pagefooter__social">
           <p class="sociallinks">
             <a class="sociallink sociallink--in" href=""></a>
@@ -119,5 +160,21 @@
         </div>
       </div>
     </footer>
+    <script>
+    var navMain = document.querySelector('.topnav');
+    var navToggle = document.querySelector('.topnav__toggle');
+
+    navMain.classList.remove('topnav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('topnav--closed')) {
+        navMain.classList.remove('topnav--closed');
+        navMain.classList.add('topnav--opened');
+      } else {
+        navMain.classList.add('topnav--closed');
+        navMain.classList.remove('topnav--opened');
+      }
+    });
+    </script>
   </body>
 </html>

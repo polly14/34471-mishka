@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишкаю Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -11,18 +12,25 @@
     <header class="topmenu">
       <div class="topmenu__wrapper">
         <div class="topmenu__logo">
-          <img src="img/logo-mobile.svg" width="85" height="35">
+          <a href="index.html"><img src="img/logo-mobile.svg" width="85" height="35"></a>
         </div>
-        <nav class="topnav  topnav--closed">
+        <nav class="topnav  topnav--closed  topnav--nojs">
           <button class="topnav__toggle" type="button"></button>
           <div class="topnav__wrapper">
             <ul class="topnav__menu">
-              <li class="topnav__item"><a href="">Каталог товаров</a></li>
-              <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+              <li class="topnav__item  topnav__item--active"><a>Каталог товаров</a></li>
+              <li class="topnav__item"><a href="form.html">Вязание на заказ</a></li>
             </ul>
             <ul class="topnav__user">
               <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
               <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+            </ul>
+            <ul class="topnav__newsale">
+              <li  class="topnav__item"><a href="">Новые поступления</a></li>
+              <li  class="topnav__item"><a href="">Распродажа</a></li>
+            </ul>
+            <ul class="topnav__delivery">
+              <li  class="topnav__item  topnav__item--delivery">Бесплатная доставка по России</li>
             </ul>
           </div>
         </nav>
@@ -37,37 +45,45 @@
     <!-- items -->
     <section class="catalog">
       <div class="catalog__wrapper">
-        <div class="catalogitem">
-          <div class="catalogitem__img">
-            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195">
+        <div class="catalog__list">
+          <div class="catalogitem">
+            <div class="catalogitem__img">
+              <img src="img/photo-1-mobile@1x.jpg" width="260" height="195">
+            </div>
+            <div class="catalogitem__desc">
+              <h3 class="catalogitem__title">Зайчик-попрыгайчик</h3>
+              <small class="catalogitem__info">Рост 30 см, вес 200 г</small>
+              <div class="catalogitem__user">
+                <div class="catalogitem__price">1200 руб.</div>
+                <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
+              </div>
+            </div>
           </div>
-          <h3 class="catalogitem__title">Зайчик-попрыгайчик</h3>
-          <small class="catalogitem__info">Рост 30 см, вес 200 г</small>
-          <div class="catalogitem__user">
-            <div class="catalogitem__price">1200 руб.</div>
-            <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
+          <div class="catalogitem">
+            <div class="catalogitem__img">
+              <img src="img/photo-2-mobile@1x.jpg" width="260" height="195">
+            </div>
+            <div class="catalogitem__desc">
+              <h3 class="catalogitem__title">Корзинка для белья</h3>
+              <small class="catalogitem__info">Диаметр 15 см, высота 10 см</small>
+              <div class="catalogitem__user">
+                <div class="catalogitem__price">690 руб.</div>
+                <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="catalogitem">
-          <div class="catalogitem__img">
-            <img src="img/photo-2-mobile@1x.jpg" width="260" height="195">
-          </div>
-          <h3 class="catalogitem__title">Корзинка для белья</h3>
-          <small class="catalogitem__info">Диаметр 15 см, высота 10 см</small>
-          <div class="catalogitem__user">
-            <div class="catalogitem__price">690 руб.</div>
-            <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
-          </div>
-        </div>
-        <div class="catalogitem">
-          <div class="catalogitem__img">
-            <img src="img/photo-3-mobile@1x.jpg" width="260" height="195">
-          </div>
-          <h3 class="catalogitem__title">Большая корзинка для игрушек</h3>
-          <small class="catalogitem__info">Диаметр 30 см, высота 30 см</small>
-          <div class="catalogitem__user">
-            <div class="catalogitem__price">1500 руб.</div>
-            <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
+          <div class="catalogitem">
+            <div class="catalogitem__img">
+              <img src="img/photo-3-mobile@1x.jpg" width="260" height="195">
+            </div>
+            <div class="catalogitem__desc">
+              <h3 class="catalogitem__title">Большая корзинка для игрушек</h3>
+              <small class="catalogitem__info">Диаметр 30 см, высота 30 см</small>
+              <div class="catalogitem__user">
+                <div class="catalogitem__price">1500 руб.</div>
+                <button class="catalogitem__addtocart" type="button"><img src="img/icon-cart.svg" width="" height=""></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -76,12 +92,17 @@
     <section class="video">
       <div class="video__wrapper">
         <div class="processvideo">
-          <h3 class="processvideo__title">Процесс производства</h3>
-          <video class="processvideo__video" controls width="260" height="150" preload="metadata" poster="img/video-mobile@1x.jpg" >
-            <source src="video.mp4" type="video/mp4">
-            <source src="video.ogv" type="video/ogg">
-            <source src="video.webm" type="video/webm">
-          </video>
+          <h3 class="processvideo__title">Процесс <br>производства</h3>
+          <div class="processvideo__cont">
+            <button type="button" class="processvideo__play" >
+              <img src="img/play.svg" width="101" height="77">
+            </button>
+            <video class="processvideo__video"  width="260" height="150" preload="metadata" poster="img/video-mobile@1x.jpg" >
+              <source src="video.mp4" type="video/mp4">
+              <source src="video.ogv" type="video/ogg">
+              <source src="video.webm" type="video/webm">
+            </video>            
+          </div>
           <small class="processvideo__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</small>
           <button type="button" class="btn btn--order">Сделать заказ</button>
         </div>
@@ -90,6 +111,7 @@
     <!-- footer -->
     <footer class="pagefooter">
       <div class="pagefooter__wrapper">
+        <div class="pagefooter__logo"><img src="img/logo-mobile.svg" width="85" height="35"></div>
         <div class="pagefooter__social">
           <p class="sociallinks">
             <a class="sociallink sociallink--in" href=""></a>
@@ -110,19 +132,41 @@
           в корзину</h2>
         <form class="addtocart__form">
           <div class="addtocart__sizesblock">
-            <label class="addtocart__vr">Выберите размер:</label>
+            <div class="addtocart__vr">Выберите размер:</div>
             <div class="addtocart__sizes">
-              <input id="checkbox-s" type="checkbox" checked>
-              <label for="checkbox-s">S</label>
-              <input id="checkbox-m" type="checkbox">
-              <label for="checkbox-m">M</label>
-              <input id="checkbox-l" type="checkbox" >
-              <label for="checkbox-l">L</label>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-s" type="checkbox" checked>
+                <label for="checkbox-s"><span>S</span></label>
+              </div>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-m" type="checkbox">
+                <label for="checkbox-m"><span>M</span></label>
+              </div>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-l" type="checkbox" >
+                <label for="checkbox-l"><span>L</span></label>
+              </div>
             </div>
           </div>
           <button class="btn btn--addtocart">Добавить</button>
         </form>
       </div>
     </section>
+    <script>
+    var navMain = document.querySelector('.topnav');
+    var navToggle = document.querySelector('.topnav__toggle');
+
+    navMain.classList.remove('topnav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('topnav--closed')) {
+        navMain.classList.remove('topnav--closed');
+        navMain.classList.add('topnav--opened');
+      } else {
+        navMain.classList.add('topnav--closed');
+        navMain.classList.remove('topnav--opened');
+      }
+    });
+    </script>
   </body>
 </html>
