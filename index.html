@@ -2,9 +2,40 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [59.93863106417265,30.3230545],
+                zoom: 15
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([59.93863106417265,30.3230545], {
+                hintContent: 'Mishka!',
+                balloonContent: 'Милые штуки'
+              }, {
+            
+            iconLayout: 'default#image',
+            
+            iconImageHref: 'img/map-pin.svg',
+            
+            iconImageSize: [66, 101],
+            
+            iconImageOffset: [-33, -101]
+              
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
   </head>
   <body>
     <!-- top menu, mobile menu -->
@@ -13,16 +44,23 @@
         <div class="topmenu__logo">
           <img src="img/logo-mobile.svg" width="85" height="35">
         </div>
-        <nav class="topnav  topnav--closed">
+        <nav class="topnav  topnav--closed  topnav--nojs">
           <button class="topnav__toggle" type="button"></button>
           <div class="topnav__wrapper">
             <ul class="topnav__menu">
-              <li class="topnav__item"><a href="">Каталог товаров</a></li>
-              <li class="topnav__item"><a href="">Вязание на заказ</a></li>
+              <li class="topnav__item"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="topnav__item"><a href="form.html">Вязание на заказ</a></li>
             </ul>
             <ul class="topnav__user">
               <li class="topnav__item  topnav__item--search"><a href="">Поиск по сайту</a></li>
               <li class="topnav__item  topnav__item--shopcart"><a href="">Корзина: <span class="shopcart-0">пока пуста</span></a></li>
+            </ul>
+            <ul class="topnav__newsale">
+              <li  class="topnav__item"><a href="">Новые поступления</a></li>
+              <li  class="topnav__item"><a href="">Распродажа</a></li>
+            </ul>
+            <ul class="topnav__delivery">
+              <li  class="topnav__item  topnav__item--delivery">Бесплатная доставка по России</li>
             </ul>
           </div>
         </nav>
@@ -47,28 +85,36 @@
     <!-- featured -->
     <article class="featured">
       <div class="featured__wrapper">
-        <h2 class="featured__title">Вязаные корзинки</h2>
-        <div class="featured__marker">Товар недели</div>
-        <p class="featured__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="featured__characts">
-          <tr>
-            <td class="featured__char">Цвет:</td>
-            <td class="featured__value">«Тиффани»/серый</td>
-          </tr>
-          <tr>
-            <td class="featured__char">Диаметр:</td>
-            <td class="featured__value">25 см</td>
-          </tr>
-          <tr>
-            <td class="featured__char">Высота:</td>
-            <td class="featured__value">15 см</td>
-          </tr>
-        </table>
-        <div class="featured__img">
-          <a href=""><img src="img/triple-set-mobile@1x.jpg" width="260" height="315"></a>
+        <div class="featured__header">
+          <h2 class="featured__title">Вязаные корзинки</h2>
+          <div class="featured__marker">Товар <br>недели </div>
         </div>
-        <div class="featured__price">Цена: 990 руб.</div>
-        <button class="btn btn--order" type="button">Заказать</button>
+        <div class="featured__body">
+          <div class="featured__desc">
+            <p class="featured__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="featured__characts">
+              <tr>
+                <td class="featured__char">Цвет:</td>
+                <td class="featured__value">«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <td class="featured__char">Диаметр:</td>
+                <td class="featured__value">25 см</td>
+              </tr>
+              <tr>
+                <td class="featured__char">Высота:</td>
+                <td class="featured__value">15 см</td>
+              </tr>
+            </table>
+          </div>
+          <div class="featured__img">
+            <a href=""><img src="img/triple-set-mobile@1x.jpg" width="260" height="315"></a>
+          </div>
+          <div class="featured__user">
+            <div class="featured__price">Цена: 990 руб.</div>
+            <button class="btn btn--featured" type="button">Заказать</button>
+          </div>
+        </div>
       </div>
     </article>
     <!-- about -->
@@ -77,25 +123,32 @@
         <section class="about__block">
           <h2 class="about__title">Коротко о нас:</h2>
           <div class="about__list">
-            <div class="about__item about__item--ecol">Экологически чистые материалы</div>
-            <div class="about__item about__item--scand">Скандинавский стиль по российской цене</div>
-            <div class="about__item about__item--like">Увеличивает лайки на фотографиях</div>
-            <div class="about__item about__item--hand">Связано вручную с любовью и умилениями</div>
-            <div class="about__item about__item--rus">Поддержка отечественного производителя</div>
-            <div class="about__item about__item--gift">Поставляется в подарочной упаковке</div>
+            <div class="about__item about__item--ecol">Экологически<br>чистые материалы</div>
+            <div class="about__item about__item--scand">Скандинавский стиль<br>по российской цене</div>
+            <div class="about__item about__item--like">Увеличивает лайки<br>на фотографиях</div>
+            <div class="about__item about__item--hand">Связано вручную с<br>любовью и умилениями</div>
+            <div class="about__item about__item--rus">Поддержка отечественного<br>производителя</div>
+            <div class="about__item about__item--gift">Поставляется в<br>подарочной упаковке</div>
           </div>
         </section>
-        <section class="reviews">
-          <h2 class="reviews__title">Отзывы</h2>
-          <article class="reviews__item">
-            <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</blockquote>
-            <cite class="reviews__avtor">Анастасия Красильникова<br><span>@misssssiskras</span></cite>
-          </article>
-          <button class="reviews__prev" type="button"></button>
-          <button class="reviews__next" type="button"></button>
-          <button class="btn btn--reviews" type="button">Написать</button>
-        </section>
-      </div>
+      </div>    
+      <section class="reviews">
+        <div class="reviews__bg">
+          <div class="reviews__bg2"></div>
+        </div>
+        <div class="reviews__wrapper">
+          <h2 class="reviews__title">Отзывы</h2>          
+          <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</blockquote>
+          <cite class="reviews__avtor">Анастасия Красильникова<br><span>@misssssiskras</span></cite>
+          <div class="reviews__prevnext">
+            <button class="reviews__prev" type="button"></button>
+            <button class="reviews__next" type="button"></button>
+          </div>
+          <div class="reviews__btn">
+            <button class="btn btn--reviews" type="button">Написать</button>
+          </div>
+        </div>
+      </section>
     </section>
     <!-- contacts -->
     <section class="contact">
@@ -108,16 +161,21 @@
           </tr>
           <tr>
             <td class="contact__item">адрес:</td>
-            <td class="contact__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            <td class="contact__value">г. Санкт-Петербург, <br>ул. Большая <br>Конюшенная, <br>д. 19/8, офис 101</td>
           </tr>
         </table>
-        <div class="contact__map"></div>
-        <button class="btn btn--pismo" type="button">Напишите нам</button>
+        <div class="contact__map">
+          <div class="contact__map2" ><div class="contact__map3" id="map"></div></div>
+        </div>
+        <div class="contact__btn">
+          <button class="btn btn--cont" type="button">Напишите нам</button>
+        </div>
       </div>
     </section>
     <!-- footer -->
     <footer class="pagefooter">
       <div class="pagefooter__wrapper">
+        <div class="pagefooter__logo"><img src="img/logo-mobile.svg" width="85" height="35"></div>
         <div class="pagefooter__social">
           <p class="sociallinks">
             <a class="sociallink sociallink--in" href=""></a>
@@ -126,7 +184,7 @@
           </p>
         </div>
         <div class="pagefooter__copyright">
-          Разработано:
+          <p>Разработано:</p>
           <a class="pagefooter__copyrightlink" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="40" alt="HTML Academy"></a>
         </div>
       </div>
@@ -138,19 +196,41 @@
           в корзину</h2>
         <form class="addtocart__form">
           <div class="addtocart__sizesblock">
-            <label class="addtocart__vr">Выберите размер:</label>
+            <div class="addtocart__vr">Выберите размер:</div>
             <div class="addtocart__sizes">
-              <input id="checkbox-s" type="checkbox" checked>
-              <label for="checkbox-s">S</label>
-              <input id="checkbox-m" type="checkbox">
-              <label for="checkbox-m">M</label>
-              <input id="checkbox-l" type="checkbox" >
-              <label for="checkbox-l">L</label>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-s" type="checkbox" checked>
+                <label for="checkbox-s"><span>S</span></label>
+              </div>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-m" type="checkbox">
+                <label for="checkbox-m"><span>M</span></label>
+              </div>
+              <div class="addtocart__checkbox">
+                <input id="checkbox-l" type="checkbox" >
+                <label for="checkbox-l"><span>L</span></label>
+              </div>
             </div>
           </div>
           <button class="btn btn--addtocart">Добавить</button>
         </form>
       </div>
     </section>
+    <script>
+    var navMain = document.querySelector('.topnav');
+    var navToggle = document.querySelector('.topnav__toggle');
+
+    navMain.classList.remove('topnav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('topnav--closed')) {
+        navMain.classList.remove('topnav--closed');
+        navMain.classList.add('topnav--opened');
+      } else {
+        navMain.classList.add('topnav--closed');
+        navMain.classList.remove('topnav--opened');
+      }
+    });
+    </script>
   </body>
 </html>

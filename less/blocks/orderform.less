@@ -2,18 +2,48 @@
   
   &__wrapper {
     width: 260px;
-    margin: 0px auto;
+    margin: 30px auto 50px;
     .clearfix();
+  }
+  
+  &__text {
+    display: block;
+    line-height: 24px;
   }
   
   & fieldset {
     border-top: solid 1px @maincolor;
-    padding-left: 0px;
+    padding: 10px 0px;
+    margin-top: 25px;
   }
   
   & legend {
     .granttext();
     color:@maincolor;
+    background: #ffffff;
+    padding-right: 20px;
+  }
+  
+  &__field {
+    padding-left: 60px;
+    position: relative;
+  }
+  
+  &__tip .orderform__field {
+    margin-top: 30px;
+  }
+  
+  &__color {
+    margin-bottom: 10px;
+  }
+  
+  &__color .orderform__field {
+    margin-top: 45px;
+    
+    &:first-child {
+      margin-top: 30px;
+    }
+    
   }
   
   & label {
@@ -25,11 +55,95 @@
     font-size: 17px;
     border: none;
     border-bottom: 2px solid #000000;
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
     
     &::placeholder {
       color: @fadecolor;
-    } 
+    }     
+  }
+  
+  &__pers div {
+    margin-top: 25px;
+  }
+  
+  &__tel input {
+    margin-top: 10px;
+    background: url("../img/phone.svg") right 50% no-repeat;
+    background-size: 25px 25px;
+    padding-right: 25px;
+  }
+  
+  &__email input {
+    margin-top: 10px;
+    background: url("../img/mail.svg") right 50% no-repeat;
+    background-size: 32px 32px;
+    padding-right: 32px;
+  }
+  
+  &__dop {
+    margin-top: 15px;
     
+    & textarea {
+      padding: 15px;
+      width: 260px;
+      box-sizing: border-box;
+    }
+    
+  }
+    
+  & input[type=radio] {
+    display: none;
+  }
+  
+  & input[type=checkbox] {
+    display: none;
+  }
+  
+  & input[type=radio] + label::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 0px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  & input[type=radio]:checked + label::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 12px;
+    background: @maincolor;
+    border-radius: 50%;
+  }
+  
+  & input[type=checkbox] + label::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: -11px;
+    left: 0px;
+    border: 2px solid #444444;
+    box-sizing: border-box;
+  }
+  
+  & input[type=checkbox]:checked + label::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 17px;
+    top: 0px;
+    left: 9px;
+    background: url("../img/tick-mobile.svg") center no-repeat;
   }
   
   & textarea {
@@ -44,8 +158,17 @@
   
   &__zametka {
     font-size: 14px;
+    white-space: nowrap;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   
+}
+
+.btn--send {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media @tablet-widths {
@@ -53,13 +176,423 @@
   .orderform {
   
     &__wrapper {
-      .container();  
+      width: 768px;
+      margin: 65px auto 40px;
+    }
+    
+    &__text {
+      display: block;
+      line-height: 30px;
+      font-size: 17px;
+      padding: 0px 50px;
+    }
+    
+    & fieldset {
+      border-top: none;
+      padding: 0px;
+      margin: 0px;
+      position: relative;
+    }
+    
+    & legend {
+      background: none;
+      width: 167px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    &__f1 {
+      margin: 70px auto 40px;
+      width: 668px;
+      
+      & label {
+        margin-left: 20px;
+      }
+      
+    }
+    
+    &__f2 {
+      padding: 80px 50px 70px;
+      width: 668px;
+      background: @greyback;
+      
+      & label {
+        margin-left: 20px;
+      }
+      
+    }
+    
+     &__f3 {
+      margin: 50px auto 70px;
+      width: 668px;
+      
+      & legend {
+        margin-top: 16px;
+      }
+      
+      & label {
+        margin-right: 20px;
+        
+      }
+      
+    }
+    
+     &__f4 {
+      padding: 60px 50px 60px;
+      width: 668px;
+      background: @greyback;
+      margin: 0px;
+       
+        & legend {
+        margin-top: 16px;
+      }
+                  
+    }
+    
+      &__f5 {
+      margin: 50px auto 30px;
+      width: 668px;
+      
+      & legend {
+        margin-top: 30px;
+      }
+            
+    }
+    
+    &__tip .orderform__field {
+      margin-top: 0px;
+      margin-bottom: 60px;
+      margin-left: 168px;
+      
+      &:last-child {
+        margin-bottom: 30px;
+      }
+      
+    }
+    
+    &__color {
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 168px;      
+    }
+  
+    &__color .orderform__field {
+      margin-top: 60px;
+      width: 250px;
+      box-sizing: border-box;
+    
+      &:nth-child(1) {
+        margin-top: 0px;
+      }
+      &:nth-child(2) {
+        margin-top: 0px;
+      }
+    
+    }
+    
+    & label {
+      .boldtext(19px);
+      .blacktext();
+    }
+    
+    & input[type=radio] + label::before {
+    width: 52px;
+    height: 52px;
+    top: -18px;
+    left: 0px;
+  }
+  
+  & input[type=radio]:checked + label::after {
+    width: 22px;
+    height: 22px;
+    top: -3px;
+    left: 15px;
+  }
+  
+  & input[type=checkbox] + label::before {
+    width: 52px;
+    height: 52px;
+    top: -18px;
+    left: 0px;    
+  }
+  
+  & input[type=checkbox]:checked + label::after {
+    width: 33px;
+    height: 23px;
+    top: -6px;
+    left: 13px;
+    background: url("../img/tick.svg") center no-repeat;
+  }
+    
+     & input {
+    font-size: 19px;
+    height: 55px;
+    box-sizing: border-box;
+    margin-top: 0px;
+    
+    &::placeholder {
+      color: @fadecolor;
+      font-style: normal;
+    }     
+  }
+  
+  &__pers div {
+    margin-top: 0px;
+    margin-left: 168px;
+  }
+    
+    &__name {
+      display: flex;
+      align-items: baseline;
+      width: 500px;
+      margin-bottom: 15px;
+      
+      & input {
+        padding-left: 10px;
+      }
+      
+    }
+    &__family {
+      display: flex;
+      align-items: baseline;
+      width: 500px; 
+      margin-bottom: 15px;
+      
+      & input {
+        padding-left: 10px;
+      }
+      
+    }
+    &__secondname {
+      display: flex;
+      align-items: baseline;
+      width: 500px; 
+      
+      & input {
+        padding-left: 10px;
+      }
+      
+    }
+    
+    &__tel input {
+      padding-top: 0px;
+      margin-top: 0px;
+      margin-left: 168px;
+      margin-bottom: 15px;
+      width: 500px;
+      padding-left: 10px;
+      
+    }
+    
+    &__email input {
+      margin-top: 0px;
+      margin-left: 168px;
+      width: 500px;
+      padding-left: 10px;
+      
+    }
+    
+    &__dop {
+      margin-left: 168px;
+      
+      & textarea {
+        font-size: 19px;
+        width: 500px;
+      }
+      
+    }
+    
+    &__send {
+      padding-top: 15px;
+      width: 768px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    &__zametka {
+      font-size: 17px;
+      margin-right: 50px;
     }
   
   }
   
+ .btn--send {
+  width: 230px;
+   order: -2;
+   margin-left: 50px;
+} 
+  
 }
 
 @media @desktop-widths {
+  
+ .orderform {
+  
+    &__wrapper {
+      width: 1150px;
+      margin: 115px auto 90px;
+    }
+    
+    &__text {
+      padding: 0px 225px;
+    }
+           
+    & legend {
+      width: 175px;
+      text-align: center;
+    }
+    
+    &__f1 {
+      margin: 70px auto 40px;
+      width: 1050px;
+      
+      & label {
+        margin-left: 20px;
+      }
+      
+    }
+    
+    &__f2 {
+      padding: 80px 50px 70px;
+      width: 1050px;
+      background: @greyback;
+      
+      & label {
+        margin-left: 20px;
+      }
+      
+    }
+    
+     &__f3 {
+      margin: 50px auto 70px;
+      width: 1050px;
+      
+      & legend {
+        margin-top: 16px;
+      }
+      
+      & label {
+        margin-right: 20px;
+        
+      }
+      
+    }
+    
+     &__f4 {
+      padding: 60px 50px 60px;
+      width: 1050px;
+      background: @greyback;
+      margin: 0px;
+       
+        & legend {
+        margin-top: 16px;
+      }
+                  
+    }
+    
+      &__f5 {
+      margin: 50px auto 30px;
+      width: 1050px;
+      
+      & legend {
+        margin-top: 30px;
+      }
+            
+    }
+    
+    &__tip .orderform__field {
+      margin-top: 0px;
+      margin-bottom: 60px;
+      margin-left: 175px;
+      
+      &:last-child {
+        margin-bottom: 30px;
+      }
+      
+    }
+    
+    &__color {
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 175px;      
+    }
+  
+    &__color .orderform__field {
+      margin-top: 60px;
+      width: 260px;
+      box-sizing: border-box;
+    
+      &:nth-child(1) {
+        margin-top: 0px;
+      }
+      &:nth-child(2) {
+        margin-top: 0px;
+      }
+      &:nth-child(3) {
+        margin-top: 0px;
+      }
+    
+    }
+    
+  
+  &__pers div {
+    margin-left: 175px;
+  }
+    
+    &__name {
+      width: 700px;    
+    }
+   
+    &__family {    
+      width: 700px;       
+    }
+   
+    &__secondname {    
+      width: 700px; 
+    }
+    
+    &__tel input {      
+      margin-left: 175px;     
+      width: 700px;     
+    }
+    
+    &__email input {     
+      margin-left: 175px;
+      width: 700px;      
+    }
+    
+    &__dop {
+      margin-left: 175px;
+      
+      & textarea {
+        width: 700px;
+      }
+      
+    }
+    
+    &__send {
+      padding-top: 45px;
+      width: 1150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    &__zametka {
+      font-size: 17px;
+      margin-right: 50px + 175px;
+    }
+  
+  }
+  
+ .btn--send {
+  width: 230px;
+   order: -2;
+   margin-left: 50px + 175px;
+} 
   
 }

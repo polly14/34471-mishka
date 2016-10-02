@@ -24,12 +24,14 @@
 }
 
 .pagebanner--main {
-  height: 140px;
+  height: 142px;
 }
 
 @media @tablet-widths {
   
   .pagebanner {
+    
+    border-top: @greyborder 1px solid;
     
     &::before {
       position: absolute;
@@ -44,9 +46,10 @@
     }
     
     &__wrapper {
-      padding: 140px 0px;
+      padding: 90px 0px;
     }
     
+       
     &__title {
     white-space:normal;
     }
@@ -54,11 +57,12 @@
   }
   
   .pagebanner--mainbg {
-    background: #f9f9f9 url("../img/hero-desktop.jpg") center -20px no-repeat;
+    background: #f9f9f9 url("../img/hero-desktop.jpg") center -5px no-repeat;
    }
   
   .pagebanner--main {
-    height: 330px;
+    height: 328px;
+    padding: 150px 0px;
   }
   
 }
@@ -67,8 +71,12 @@
   
   .pagebanner {
     
+    &__wrapper {
+      padding: 90px 0px 120px;
+    }
+    
     &::before {
-      height: 34px;
+      height: 36px;
       background-size: contain;
       z-index: 2;
     }
@@ -78,5 +86,14 @@
     }
     
   }
+
+.pagebanner--mainbg {
+  background: #f9f9f9 url("../img/hero-desktop.jpg") center -3px no-repeat;
+  }  
+  
+.pagebanner--main {
+  height: 330px;
+  padding: 150px 0px 150px;
+  }  
   
 }

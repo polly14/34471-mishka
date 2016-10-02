@@ -3,33 +3,50 @@
   &__wrapper {
     .clearfix();
     width: 260px;
-    margin: 0px auto;
+    margin: 25px auto 15px;
   }
   
   &__marker {
     .granttext();
     color: @maincolor;
+    padding: 10px 0px;
+    
+    & br {
+      display: none;
+    }
+    
   }
   
   &__price {
     .boldtext();
     line-height: 24px;
+    text-align: center;
   }
   
-  &__desc {
+  &__text {
     line-height: 24px;
   }
   
   &__characts {
     line-height: 20px;
     border-collapse: collapse;
+    width: 100%;
     
     & td {
       border-bottom:1px solid @greyborder;
+      padding: 10px 0px;
     }
     
   }
   
+  &__img {
+    margin: 25px 0px 20px;
+  }
+  
+}
+
+.btn--featured {
+  margin: 25px 0px;
 }
 
 @media @tablet-widths {
@@ -37,12 +54,142 @@
   .featured {
   
     &__wrapper {
-      .container();  
+      .container();
+      margin-top: 35px;
+      margin-bottom: 15px;
     }
+    
+    &__header {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    
+    &__title {
+      width: 564px;
+    }
+    
+    &__marker {
+      width: 100px;
+      text-align: center;
+      
+      & br {
+        display: inline;
+      }
+      
+    }
+    
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    &__desc {
+      width: 290px;
+      margin-bottom: 150px;
+    }
+    
+    &__text {
+      line-height: 30px;
+      font-size: 17px;
+    }
+    
+    &__img {
+      
+      
+      & img {
+        width: 332px;
+        height: auto;
+      }
+      
+    }
+    
+    &__user {
+      margin-top: -122px;
+    }
+    
+    &__price {
+      .boldtext(20px);
+      line-height: 24px;
+    }
+    
+  }
+  
+  .btn--featured {
+    width: 290px;
   }
   
 }
 
 @media @desktop-widths {
+  
+   .featured {
+  
+    &__wrapper {
+      margin-top: 45px;
+      margin-bottom: 55px;
+    }
+    
+    &__header {
+      display: flex;
+      margin-top: 110px;
+      margin-bottom: 30px;
+    }
+    
+    &__title {
+      width: 564px;
+      flex-grow: 1;
+      z-index: 5;
+    }
+    
+    &__marker {
+      width: 175px;
+      text-align: center;
+      order: -1;
+      margin: 8px auto;
+    }
+    
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 175px;
+    }
+    
+    &__desc {
+      width: 290px;
+      margin-bottom: 150px;
+    }
+    
+    &__text {
+      line-height: 30px;
+      font-size: 17px;
+    }
+     
+     &__characts {
+       margin-top: 30px;
+     } 
+    
+    &__img {
+      margin-top: -170px;
+      
+      & img {
+        width: 525px;
+        height: auto;
+        z-index: 1;
+      }
+      
+    }
+    
+    &__user {
+      margin-top: -122px;
+    }
+    
+    &__price {
+      .boldtext(20px);
+      line-height: 24px;
+    }
+    
+  }
   
 }

@@ -1,12 +1,21 @@
 .addtocart {
+  top: 0px;
+  left: 0px;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: hidden; /* по умолчанию */
   
   &__wrapper {
-    width: 260px;
+    width: 320px;
     margin: auto;
     padding: 30px;
     background-color: #ffffff;
-    border-bottom: @greyborder 1px solid;
-    border-top: @greyborder 1px solid;
+    border: @greyborder 1px solid;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   }
     
   &__title {
@@ -15,13 +24,68 @@
     text-align: center;
   }
   
-  &__sizes label {
-    .granttext();
-    line-height: 16px;
+  &__form {
+    margin: 20px 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   
+  &__sizesblock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 0px 30px;
+  }
+  
+  &__sizes {
+    .granttext();
+    line-height: 16px;
+    margin: 30px 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 260px;    
+  }
+  
+  &__checkbox {    
+    display: flex;
+    
+    & input {
+      display: none;
+    }
+    
+    & label {
+      width: 80px;
+      height: 50px;
+      position: relative;
+      display: flex;
+      
+      & span {
+        margin: auto;
+      }
+      
+      &::before {
+        position: absolute;
+        content: "";
+        top:0px;
+        left:0px;
+        border: 2px solid @greyborder;
+        width: 80px;
+        height: 50px;
+        box-sizing: border-box;
+      }
+      
+    }
+    
+    & input[type=checkbox]:checked + label::before {
+      border: 2px solid @maincolor;
+    }
+    
+  }  
+  
   &__vr {
-    line-height: 30px;
+    width: 100%; 
     text-align: center;
   }
     
@@ -32,16 +96,42 @@
   .addtocart {
   
     &__wrapper {
-      width: 368px;
-      padding: 100px;
+      width: 490px;
+      padding: 40px;
       border: @greyborder 1px solid;
     }
     
     &__title {
     .granttext(30px);
     white-space:normal;
-  }
+    }
     
+    &__vr {
+      font-size: 17px;
+    }
+    
+    &__sizes {
+      width: 350px;
+    }
+    
+    &__checkbox {
+      
+      & label {
+        
+        width: 112px;
+        
+        &::before {
+          width: 112px;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+  .btn.btn--addtocart {
+    width: 350px;
   }
   
 }

@@ -1,9 +1,19 @@
 .reviews {
   
-  & blockquote {
+  &__wrapper {
+    .clearfix();
+    width: 260px;
+    margin: 30px auto;
+  }
+  
+  &__prevnext {
+    padding-top: 30px;
+  }
+  
+  &__text {
     line-height: 30px;
     padding: 0px;
-    margin: 0px;
+    margin: 20px 0px 25px;
   }
   
   &__prev {
@@ -11,7 +21,9 @@
     background: #ffffff url("../img/icon-left-arrow.svg") center no-repeat;
     border-width: 1px;
     height: 50px;
-    width: 128px;
+    width: 130px;
+    box-sizing: border-box;
+    margin: 0px;
   }
   
   &__next {
@@ -19,18 +31,24 @@
     background: #ffffff url("../img/icon-right-arrow.svg") center no-repeat;
     border-width: 1px;
     height: 50px;
-    width: 128px;
+    width: 130px;
+    box-sizing: border-box;
+    margin: 0px 0px 0px -4px;    
+  }
+  
+  &__btn {
+    margin: 40px 0px 15px;
   }
   
   &__avtor {
     .blacktext();    
     .boldtext(18px);
-    line-height: 24px;
+    line-height: 30px;
     font-style:normal;
     
     & span {
       color: @color;
-      font-size: 15px;
+      font-size: 18px;
       line-height: 30px;
       font-weight: normal;
     }    
@@ -41,8 +59,98 @@
 
 @media @tablet-widths {
   
+  .reviews {           
+    
+    &__wrapper {
+      .container();
+      margin-top: 90px;
+      padding-top: 10px;
+      padding-bottom: 120px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      align-content: center; 
+    }
+    
+    &__bg {
+      position: relative;
+      .container();
+    }
+    
+    &__bg2 {
+      position: absolute;
+      top: -60px;
+      left:-50px;
+      width: 350px;
+      height: 457px;
+      background: url("../img/review@1x.jpg") top left no-repeat;
+      z-index: 1;
+    }
+        
+    &__title {
+      order: 0;
+      z-index: 2;
+    }
+    
+    &__text {
+      font-size: 17px;
+      order: 2;
+      width: 100%;
+      z-index: 2;
+      margin: 55px 0px;
+    }
+    
+    &__avtor {
+      order: 3;
+      z-index: 2;
+    }
+    
+    &__prevnext {
+      order: 4;
+      padding: 0px;
+    }
+    
+    &__prev {
+      border: none;
+      width: 83px;
+    }
+    
+    &__next {
+      border: none;
+      width: 83px;
+    }
+    
+    &__btn {
+      order: 1;
+      margin: 0px;
+    }
+    
+  }
+  
+  .btn--reviews {
+    width: 175px;
+  }
+  
 }
 
 @media @desktop-widths {
+  
+  .reviews {
+    
+    &__title {
+      margin-left: 175px;
+    }
+    
+    &__text {
+      margin-left: 175px;
+      margin-right: 100px;
+    }
+    
+    &__avtor {
+      margin-left: 175px;
+    }
+    
+  }
   
 }

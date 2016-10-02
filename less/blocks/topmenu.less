@@ -1,6 +1,7 @@
 .topmenu {
-  .greyborder();
   
+  border-bottom: @greyborder 1px solid;
+    
   &__wrapper {
     .container();
     .clearfix();
@@ -19,8 +20,40 @@
 
 @media @tablet-widths {
   
+  .topmenu {
+    
+    margin-bottom: -64px;
+        
+    &__wrapper {
+      position: relative;
+    }
+    &__logo {
+      position: absolute;
+      top: 0px;
+      left:0px;
+      width: 180px;
+      height: 89px;
+      z-index: 25;
+      text-align: left;
+    }
+  }
+  
 }
 
 @media @desktop-widths {
+  
+  .topmenu {
+    
+     &__logo {
+      position: absolute;
+      top: 0px;
+      left:435px;
+      width: 180px;
+      height: 89px;
+      z-index: 25;
+      text-align: center;
+    }
+    
+  }
   
 }
