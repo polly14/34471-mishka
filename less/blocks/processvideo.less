@@ -5,6 +5,13 @@
   margin: 30px 0px 55px;  
   .greyborder();
   
+  &:hover {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.10);    
+  }
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);   
+  }
+  
   &__text {
     line-height: 24px;
     padding: 25px 45px 0px 30px;
@@ -40,6 +47,11 @@
     height: 150px;
     top:0px;
     left:-1px;
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-size: 260px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+       
   }
   
   &__play {
@@ -51,8 +63,33 @@
     left:130px-50px;
     border: none;
     background: none;
+    
+    &:hover {
+      width: 121.2px;
+      height: 92.4px;
+      top: 75px - 46px ;
+      left: 130px - 60px;
+    }
+    
+    &:active {
+      width: 101px * 0.8;
+      height: 77px * 0.8;
+      top: 75px - 28px;
+      left: 130px - 40px ;
+      opacity: 0.3;
+    }
+    
   }
   
+}
+
+@media (max-width: 767px) and (min-resolution: 144dpi),
+  (max-width: 767px) and (min-resolution: 1.5dppx) {
+    
+    .progressvideo__video {
+      background-image: url("../img/video-mobile@2x.jpg");
+    } 
+    
 }
 
 .btn--processvideo {
@@ -60,6 +97,7 @@
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 25px;
+  
 }
 
 @media @tablet-widths {
@@ -115,11 +153,24 @@
       height: 455px;
       top:0px;
       left:-1px;
+      background-image: url("../img/video-tablet@1x.jpg");
+      background-size: 668px 455px;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   
     &__play {
       top:227px-37px;
       left:334px-50px;
+      
+      &:hover {
+        top:227px - 46px ;
+        left:334px - 60px ;
+      }
+      &:active {
+        top:227px - 28px ;
+        left:334px - 40px ;
+      }
       
     }
   
@@ -129,9 +180,18 @@
     width: 586px;
     margin-left: 40px;
     margin-top: 25px;
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
   
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+  (min-width: 768px) and (min-resolution: 1.5dppx) {
+    
+    .progressvideo__video {
+      background-image: url("../img/video-tablet@2x.jpg");
+    } 
+    
 }
 
 @media @desktop-widths {
@@ -185,11 +245,24 @@
       height: 455px;
       top:0px;
       left:-1px;
+      background-image: url("../img/video-desktop@1x.jpg");
+      background-size: 680px 455px;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   
     &__play {
       top:227px-37px;
       left:340px-50px;
+      
+      &:hover {
+        top:227px - 46px ;
+        left:340px - 60px ;
+      }
+      &:active {
+        top:227px - 28px ;
+        left:340px - 40px ;
+      }
       
     }
   
@@ -200,5 +273,14 @@
     margin-left: 760px;
     margin-bottom: 10px;
   }
+    
+}
+
+@media (min-width: 1150px) and (min-resolution: 144dpi),
+  (min-width: 1150px) and (min-resolution: 1.5dppx) {
+    
+    .progressvideo__video {
+      background-image: url("../img/video-desktop@2x.jpg");
+    } 
     
 }

@@ -11,8 +11,17 @@
     line-height: 78px;
     text-align: center;
     
+    & a:hover img {
+      opacity: 0.6;
+    }
+    
+     & a:active img {
+      opacity: 0.3;
+    }
+    
     & img {
       vertical-align: middle;
+      
     }
   }
   
@@ -29,12 +38,18 @@
     }
     &__logo {
       position: absolute;
-      top: 0px;
+      top: 5px;
       left:0px;
       width: 180px;
       height: 89px;
       z-index: 25;
       text-align: left;
+      
+      & img {
+        width: 113px;
+        height: 47px;
+      }
+      
     }
   }
   
@@ -46,12 +61,18 @@
     
      &__logo {
       position: absolute;
-      top: 0px;
+      top: 5px;
       left:435px;
       width: 180px;
       height: 89px;
       z-index: 25;
       text-align: center;
+       
+        & img {
+        width: 149px;
+        height: 73px;
+      }
+       
     }
     
   }

@@ -24,6 +24,14 @@
     width: 130px;
     box-sizing: border-box;
     margin: 0px;
+    
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    
   }
   
   &__next {
@@ -33,7 +41,15 @@
     height: 50px;
     width: 130px;
     box-sizing: border-box;
-    margin: 0px 0px 0px -4px;    
+    margin: 0px 0px 0px -4px;
+    
+     &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    
   }
   
   &__btn {
@@ -51,6 +67,7 @@
       font-size: 18px;
       line-height: 30px;
       font-weight: normal;
+      font-family: "Open Sans", sans-serif;
     }    
     
   }
@@ -84,7 +101,9 @@
       left:-50px;
       width: 350px;
       height: 457px;
-      background: url("../img/review@1x.jpg") top left no-repeat;
+      background-image: url("../img/review@1x.jpg") ;
+      background-position: top left ;
+      background-repeat: no-repeat;
       z-index: 1;
     }
         
@@ -132,6 +151,13 @@
     width: 175px;
   }
   
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+  (min-width: 768px) and (min-resolution: 1.5dppx) {    
+     .reviews__bg2 {      
+      background-image: url("../img/review@2x.jpg") ;     
+    }    
 }
 
 @media @desktop-widths {

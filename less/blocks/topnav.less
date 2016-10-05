@@ -57,11 +57,11 @@
       vertical-align: middle;
       padding-left: 75px;
       
-      &[href]:hover {
+      &[href]:hover span {
         opacity: 0.6;
       }
       
-      &[href]:active {
+      &[href]:active span {
         opacity: 0.3;
       }
       
@@ -107,7 +107,18 @@
   top: 31px;
   width: 18px;
   height: 18px;
+  opacity: 0.2;  
 }
+
+ .topnav__item--search a:hover::before {
+    opacity: 1;
+    background: url("../img/icon-search-h.svg") no-repeat top left;
+  }
+
+.topnav__item--search a:active::before {
+    opacity: 0.3;
+    background: url("../img/icon-search-h.svg") no-repeat top left;
+  }
 
 .topnav__item--shopcart a::before {
   content:"";
@@ -117,7 +128,18 @@
   top: 30px;
   width: 20px;
   height: 20px;
+  opacity: 0.2;
 }
+
+ .topnav__item--shopcart a:hover::before {
+    opacity: 1;
+    background: url("../img/icon-cart-h.svg") no-repeat top left;
+  }
+
+.topnav__item--shopcart a:active::before {
+    opacity: 0.3;
+    background: url("../img/icon-cart-h.svg") no-repeat top left;
+  }
 
 @media @mobile-widths-only {
   .topnav--closed .topnav__menu, .topnav--closed .topnav__user {
@@ -155,6 +177,8 @@
     }
     &__delivery {
       display: block;
+      font-family: "Open Sans", sans-serif;
+       
     }
     &__wrapper {
       display: flex;
