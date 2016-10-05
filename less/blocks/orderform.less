@@ -60,6 +60,19 @@
     box-sizing: border-box;
     margin-top: 5px;
     
+    &:hover {
+      border-bottom: 2px solid @maincolor;
+    }
+    &:active {
+      border-bottom: 2px solid @maincolor;
+    }
+    &:focus {
+      border-bottom: 2px solid @maincolor;
+    }
+    &::error {
+      border-bottom: 2px solid #f0b1b1;
+    }
+    
     &::placeholder {
       color: @fadecolor;
     }     
@@ -74,6 +87,20 @@
     background: url("../img/phone.svg") right 50% no-repeat;
     background-size: 25px 25px;
     padding-right: 25px;
+    
+    &:hover {
+      background: url("../img/phone-h.svg") right 50% no-repeat;
+    }
+     &:active {
+      background: url("../img/phone-h.svg") right 50% no-repeat;
+    }
+     &:focus {
+      background: url("../img/phone-h.svg") right 50% no-repeat;
+    }
+     &::error {
+      background: url("../img/phone.svg") right 50% no-repeat;
+    }
+    
   }
   
   &__email input {
@@ -81,6 +108,20 @@
     background: url("../img/mail.svg") right 50% no-repeat;
     background-size: 32px 32px;
     padding-right: 32px;
+    
+     &:hover {
+      background: url("../img/mail-h.svg") right 50% no-repeat;
+    }
+     &:active {
+      background: url("../img/mail-h.svg") right 50% no-repeat;
+    }
+    &:focus {
+      background: url("../img/mail-h.svg") right 50% no-repeat;
+    }
+    &::error {
+      background: url("../img/mail.svg") right 50% no-repeat;
+    }
+    
   }
   
   &__dop {
@@ -114,6 +155,15 @@
     box-sizing: border-box;
   }
   
+   & input[type=radio] + label:hover::before {
+    border: 2px solid @maincolor;
+   }
+  
+   & input[type=radio] + label:active::before {
+     border: 2px solid #444444;
+     opacity: 0.3;
+   }
+  
   & input[type=radio]:checked + label::after {
     position: absolute;
     content: "";
@@ -136,6 +186,15 @@
     box-sizing: border-box;
   }
   
+   & input[type=checkbox] + label:hover::before {
+    border: 2px solid @maincolor;
+   }
+  
+   & input[type=checkbox] + label:active::before {
+     border: 2px solid #444444;
+     opacity: 0.3;
+   }
+  
   & input[type=checkbox]:checked + label::after {
     position: absolute;
     content: "";
@@ -149,6 +208,19 @@
   & textarea {
     font-size: 17px;
     border: 2px solid #444444;
+    
+    &:hover {
+      border: 2px solid @maincolor;
+    }
+    &:active {
+      border: 2px solid @maincolor;
+    }
+    &:focus {
+      border: 2px solid @maincolor;
+    }
+    &::error {
+      border: 2px solid #f0b1b1;
+    }
     
     &::placeholder {
       color: @fadecolor;

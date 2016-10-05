@@ -24,11 +24,28 @@
     line-height: 18px;
     .blacktext();
     border-top: #e5e5e5 solid 1px;
-    
-    a {
-      margin-left: 20px;
-    }
       
+  }
+  
+  &__copyrightlink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+    
+    &:active {
+      opacity:0.3;
+    }
+    
+    &:hover #htmlacademy {
+      fill: #46c1ae;
+    }
+    
+    svg {
+      margin-left: 20px;
+      
+    }
+    
   }
   
   &__logo {
@@ -41,11 +58,22 @@
   
   .pagefooter {
     
+    padding-top: 30px;
+    padding-bottom: 35px;
+    
     &__wrapper {      
       .container();
+    }
+    
+    &__flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap;
+      margin: 0px;
+      padding: 0px;
+      width: auto;
+      
     }
     
     &__social {
@@ -53,18 +81,40 @@
     }
     
     &__copyright {
-      margin: 0px ;
+    margin: 0px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px auto;
+    border-top: none;
+      
+  }
+    
+    &__copyrightlink {
+      margin: 0px 0px 0px auto;
       height: 145px;
       display: flex;
       align-items: center;
       justify-content: center; 
       border: none;
+      color: #000000;      
       
   }
     
     &__logo {
       display: block;
-      margin-right: 80px;
+      margin-right: 50px;
+      width: 103px;
+      height:36px;
+      background: url("../img/logo-footer.svg") center no-repeat;
+      
+      &:hover {
+        background: url("../img/logo-footer-h.svg") center no-repeat;
+      }
+      &:active {
+        opacity: 0.3;
+      }
+      
     }
     
   }

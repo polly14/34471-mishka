@@ -2,6 +2,14 @@
   padding: 0px;
   margin: 30px 0px 0px;  
   .greyborder();
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.10);    
+  }
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);   
+  }
   
   &__img {
     margin: 0px;
@@ -10,6 +18,18 @@
   
   &__desc {
     margin: 25px 25px 15px;
+  }
+  
+  &__title a {
+    .blacktext();
+    
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    
   }
   
   &__info {
@@ -23,6 +43,14 @@
     .boldtext(15px);
     .blacktext();
     line-height: 24px;
+    
+     &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    
   }
   
   &__user {
@@ -38,6 +66,20 @@
     background: none;
     width: 30px;
     height: 50px;
+    
+    & #cart {
+      opacity: 0.2;
+    }
+    
+    &:hover #cart {
+      opacity: 1;
+      fill:@maincolor;
+    }
+    &:active #cart {
+      opacity: 0.3;
+      fill:@maincolor;
+    }
+    
   }
   
 }

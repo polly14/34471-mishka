@@ -64,6 +64,14 @@
     border-bottom: 1px solid @maincolor;
     color: @color;
     padding-bottom: 5px;
+    
+    &:hover {
+      color: @maincolor;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+    
   }
   
 }
@@ -119,7 +127,7 @@
       left:-50px;
       width: 768px;
       height: 457px;
-      background: url("../img/map-tablet.jpg") top left no-repeat;
+      background: url("../img/map-tablet@1x.jpg") top left no-repeat;
       z-index: 1;
     
       &::after {
@@ -201,7 +209,7 @@
       right: 0px;
       width: 525px;
       height: 457px;
-      background: url("../img/map.jpg") top left no-repeat;
+      background: url("../img/map-desktop@1x.jpg") top left no-repeat;
       z-index: 1;
     
       &::after {
