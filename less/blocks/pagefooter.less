@@ -37,10 +37,6 @@
       opacity:0.3;
     }
     
-    &:hover #htmlacademy {
-      fill: #46c1ae;
-    }
-    
     svg {
       margin-left: 20px;
       
@@ -52,6 +48,13 @@
     display: none;
   }
   
+}
+.htmlacademy {
+  fill: #63d1bb;
+}
+
+.htmlacademy:hover {
+  fill: #46c1ae;
 }
 
 @media @tablet-widths {
@@ -107,6 +110,17 @@
       width: 103px;
       height:36px;
       background: url("../img/logo-footer.svg") center no-repeat;
+      
+      &::before {
+        content:"";
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        top:0px;
+        left:0px;
+        opacity: 0;
+        background: url("../img/logo-footer-h.svg") no-repeat top left;
+      }
       
       &:hover {
         background: url("../img/logo-footer-h.svg") center no-repeat;

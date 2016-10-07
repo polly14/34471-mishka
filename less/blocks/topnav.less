@@ -118,6 +118,17 @@
   opacity: 0.2;  
 }
 
+.topnav__item--search a::after {
+  content:"";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top:0px;
+  left:0px;
+  opacity: 0;
+  background: url("../img/icon-search-h.svg") no-repeat top left;
+}
+
  .topnav__item--search a:hover::before {
     opacity: 1;
     background: url("../img/icon-search-h.svg") no-repeat top left;
@@ -137,6 +148,17 @@
   width: 20px;
   height: 20px;
   opacity: 0.2;
+}
+
+.topnav__item--shopcart a::after {
+  content:"";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top:0px;
+  left:0px;
+  opacity: 0;
+  background: url("../img/icon-cart-h.svg") no-repeat top left;
 }
 
  .topnav__item--shopcart a:hover::before {

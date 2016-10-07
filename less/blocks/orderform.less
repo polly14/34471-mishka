@@ -59,19 +59,30 @@
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
+    box-shadow: none !important;
     
     &:hover {
       border-bottom: 2px solid @maincolor;
+      
     }
     &:active {
       border-bottom: 2px solid @maincolor;
+      box-shadow: none !important;
+      outline: none !important;
     }
     &:focus {
       border-bottom: 2px solid @maincolor;
+      box-shadow: none !important;
+      outline: none !important;
     }
-    &::error {
+   
+    &:invalid {
       border-bottom: 2px solid #f0b1b1;
+      box-shadow: none !important;
+      outline: none !important;
     }
+    
+  
     
     &::placeholder {
       color: @fadecolor;
@@ -82,44 +93,66 @@
     margin-top: 25px;
   }
   
+  &__tel::before {
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    background: url("../img/phone-h.svg") ;
+  }
+  
   &__tel input {
     margin-top: 10px;
-    background: url("../img/phone.svg") right 50% no-repeat;
+    background-image: url("../img/phone.svg") 225px 50% no-repeat;
     background-size: 25px 25px;
-    padding-right: 25px;
+    padding-right: 35px;
     
     &:hover {
-      background: url("../img/phone-h.svg") right 50% no-repeat;
+      background: url("../img/phone-h.svg") 225px 50% no-repeat;
     }
      &:active {
-      background: url("../img/phone-h.svg") right 50% no-repeat;
+      background: url("../img/phone-h.svg") 225px 50% no-repeat;
     }
      &:focus {
-      background: url("../img/phone-h.svg") right 50% no-repeat;
+      background: url("../img/phone-h.svg") 225px 50% no-repeat;
     }
-     &::error {
-      background: url("../img/phone.svg") right 50% no-repeat;
+     &:invalid {
+      background: url("../img/phone.svg") 225px 50% no-repeat;
     }
     
   }
   
+  &__email::before {
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    background: url("../img/mail-h.svg") ;
+  }
+  
   &__email input {
     margin-top: 10px;
-    background: url("../img/mail.svg") right 50% no-repeat;
+    background: url("../img/mail.svg") 220px 50% no-repeat;
     background-size: 32px 32px;
-    padding-right: 32px;
+    padding-right: 35px;
     
      &:hover {
-      background: url("../img/mail-h.svg") right 50% no-repeat;
+      background: url("../img/mail-h.svg") 220px 50% no-repeat;
     }
      &:active {
-      background: url("../img/mail-h.svg") right 50% no-repeat;
+      background: url("../img/mail-h.svg") 220px 50% no-repeat;
     }
     &:focus {
-      background: url("../img/mail-h.svg") right 50% no-repeat;
+      background: url("../img/mail-h.svg") 220px 50% no-repeat;
     }
-    &::error {
-      background: url("../img/mail.svg") right 50% no-repeat;
+    &:invalid {
+      background: url("../img/mail.svg") 220px 50% no-repeat;
     }
     
   }
@@ -214,12 +247,19 @@
     }
     &:active {
       border: 2px solid @maincolor;
+      box-shadow: none !important;
+      outline: none !important;
     }
     &:focus {
       border: 2px solid @maincolor;
+      box-shadow: none !important;
+      outline: none !important;
     }
-    &::error {
+        
+    &:invalid {
       border: 2px solid #f0b1b1;
+      box-shadow: none !important;
+      outline: none !important;
     }
     
     &::placeholder {
@@ -422,7 +462,7 @@
       margin-bottom: 15px;
       
       & input {
-        padding-left: 10px;
+        padding-left: 15px;
       }
       
     }
@@ -433,7 +473,7 @@
       margin-bottom: 15px;
       
       & input {
-        padding-left: 10px;
+        padding-left: 15px;
       }
       
     }
@@ -443,7 +483,7 @@
       width: 500px; 
       
       & input {
-        padding-left: 10px;
+        padding-left: 15px;
       }
       
     }
@@ -454,7 +494,23 @@
       margin-left: 168px;
       margin-bottom: 15px;
       width: 500px;
-      padding-left: 10px;
+      padding-left: 15px;
+      background: url("../img/phone.svg") 455px 50% no-repeat;
+      
+      &:hover {
+        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+      }
+      &:invalid {
+        background: url("../img/phone.svg") 455px 50% no-repeat;
+      }
+       &:active {
+        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+      }
+       &:focus {
+        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+      }
+      
+       
       
     }
     
@@ -462,7 +518,23 @@
       margin-top: 0px;
       margin-left: 168px;
       width: 500px;
-      padding-left: 10px;
+      padding-left: 15px;
+      background: url("../img/mail.svg") 450px 50% no-repeat;
+      
+       &:hover {
+        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+      }
+       &:invalid {
+        background: url("../img/mail.svg") 450px 50% no-repeat;
+      }
+       &:active {
+        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+      }
+      &:focus {
+        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+      }
+       
+     
       
     }
     
@@ -629,12 +701,40 @@
     
     &__tel input {      
       margin-left: 175px;     
-      width: 700px;     
+      width: 700px; 
+       background: url("../img/phone.svg") 665px 50% no-repeat;
+      
+      &:hover {
+        background: url("../img/phone-h.svg") 665px 50% no-repeat;
+      }
+       &:active {
+        background: url("../img/phone-h.svg") 665px 50% no-repeat;
+      }
+       &:focus {
+        background: url("../img/phone-h.svg") 665px 50% no-repeat;
+      }
+       &:invalid {
+        background: url("../img/phone.svg") 665px 50% no-repeat;
+      }
     }
     
     &__email input {     
       margin-left: 175px;
-      width: 700px;      
+      width: 700px; 
+       background: url("../img/mail.svg") 660px 50% no-repeat;
+      
+       &:hover {
+        background: url("../img/mail-h.svg") 660px 50% no-repeat;
+      }
+       &:active {
+        background: url("../img/mail-h.svg") 660px 50% no-repeat;
+      }
+      &:focus {
+        background: url("../img/mail-h.svg") 660px 50% no-repeat;
+      }
+      &:invalid {
+        background: url("../img/mail.svg") 660px 50% no-repeat;
+      }
     }
     
     &__dop {
