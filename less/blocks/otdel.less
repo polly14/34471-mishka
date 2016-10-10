@@ -17,7 +17,7 @@
   &__item a {
     display: block;
     height: 77px;
-    padding: 25px 30px 0px;
+    padding: 27px 30px 0px;
     margin: 0px;
     vertical-align: middle;
     color: #ffffff;
@@ -74,8 +74,8 @@
     content: "";
     width: 60px;
     height: 60px;
-    top:25px;
-    right:30px;
+    top:20px;
+    right:25px;
     background: url("../img/icon-toy.svg") right center no-repeat;
     opacity: 0.5;
   }
@@ -117,18 +117,30 @@
     }
     
     &__item a {
-      height: 95px;
-      padding: 30px 35px 5px;      
+      height: 90px;
+      padding: 28px 35px 5px;      
     }
     
   }
   
   .otdel__item--interior {
     float: left;
+    
+    & a::after {
+      top: 30px;
+      right:39px;
+    }
+    
   }
   
   .otdel__item--toys {
     float: right;
+    
+     & a::after {
+      top: 30px;
+      right:35px;
+    }
+    
   }
   
 }

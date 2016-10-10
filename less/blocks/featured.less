@@ -3,7 +3,7 @@
   &__wrapper {
     .clearfix();
     width: 260px;
-    margin: 25px auto 15px;
+    margin: 25px auto 10px;
   }
   
   &__marker {
@@ -34,13 +34,18 @@
     
     & td {
       border-bottom:1px solid @greyborder;
-      padding: 10px 0px;
+      padding: 10px 0px 10px 0px;
+      
+      &:first-child {
+        padding-right: 15px;
+      }
+      
     }
     
   }
   
   &__img {
-    margin: 25px 0px 20px;
+    margin: 25px 0px 25px;
   }
   
 }
@@ -55,13 +60,13 @@
   
     &__wrapper {
       .container();
-      margin-top: 35px;
-      margin-bottom: 15px;
+      margin-top: 40px;
+      margin-bottom: 30px;
     }
     
     &__header {
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
     
     &__title {
@@ -69,14 +74,30 @@
     }
     
     &__marker {
-      width: 100px;
+      width: 92px;
       text-align: center;
+      margin-top:3px;
+      margin-right: 3px;
       
       & br {
         display: inline;
       }
       
     }
+    
+     &__characts {
+   
+    
+    & td {
+     
+      
+      &:first-child {
+        padding-right: 0px;
+      }
+      
+    }
+    
+  }
     
     &__body {
       display: flex;
@@ -86,12 +107,13 @@
     
     &__desc {
       width: 290px;
-      margin-bottom: 150px;
+      margin-bottom: 163px;
     }
     
     &__text {
       line-height: 30px;
       font-size: 17px;
+      padding-bottom: 20px;
     }
     
     &__img {
@@ -105,12 +127,13 @@
     }
     
     &__user {
-      margin-top: -122px;
+      margin-top: -132px;
     }
     
     &__price {
       .boldtext(20px);
       line-height: 24px;
+      padding-bottom: 5px;
     }
     
   }
@@ -126,14 +149,14 @@
    .featured {
   
     &__wrapper {
-      margin-top: 45px;
-      margin-bottom: 55px;
+      margin-top: 40px;
+      margin-bottom: 45px;
     }
     
     &__header {
       display: flex;
-      margin-top: 110px;
-      margin-bottom: 30px;
+      margin-top: 105px;
+      margin-bottom: 25px;
     }
     
     &__title {
@@ -143,7 +166,7 @@
     }
     
     &__marker {
-      width: 175px;
+      width: 170px;
       text-align: center;
       order: -1;
       margin: 8px auto;
@@ -167,11 +190,11 @@
     }
      
      &__characts {
-       margin-top: 30px;
+       margin-top: 25px;
      } 
     
     &__img {
-      margin-top: -170px;
+      margin-top: -142px;
       
       & img {
         width: 525px;
@@ -182,7 +205,7 @@
     }
     
     &__user {
-      margin-top: -122px;
+      margin-top: -133px;
     }
     
     &__price {

@@ -8,20 +8,20 @@
   &__wrapper {
     .clearfix();
     width: 260px;
-    margin: 30px auto;
+    margin: 30px auto 0px;
   }
   
   &__list {
-    padding-top: 15px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 5px;
   }
   
   &__item {
     .boldtext();
     .blacktext();
     line-height: 20px;
-    padding-top: 60px;
-    padding-bottom: 24px;
+    padding-top: 63px;
+    padding-bottom: 20px;
     position: relative;
   }
   
@@ -40,8 +40,8 @@
 .about__item--scand::after {
   position: absolute;
   content: "";
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 0px;
   width: 55px;
   height: 60px;
   background: url("../img/icon-feature-3.svg") left top no-repeat;
@@ -50,7 +50,7 @@
 .about__item--like::after {
   position: absolute;
   content: "";
-  top: 8px;
+  top: 15px;
   left: 8px;
   width: 55px;
   height: 60px;
@@ -60,8 +60,8 @@
 .about__item--hand::after {
   position: absolute;
   content: "";
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 4px;
   width: 55px;
   height: 60px;
   background: url("../img/icon-feature-2.svg") left top no-repeat;
@@ -70,8 +70,8 @@
 .about__item--rus::after {
   position: absolute;
   content: "";
-  top: 8px;
-  left: 8px;
+  top: 15px;
+  left: -5px;
   width: 55px;
   height: 60px;
   background: url("../img/icon-feature-4.svg") left top no-repeat;
@@ -80,8 +80,8 @@
 .about__item--gift::after {
   position: absolute;
   content: "";
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 3px;
   width: 55px;
   height: 60px;
   background: url("../img/icon-feature-6.svg") left top no-repeat;
@@ -105,12 +105,15 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      padding-top: 15px;
     }
     
     &__item {
       .boldtext(20px);
       line-height: 24px;
       width: 50%;
+      padding-top: 63px;
+    padding-bottom: 44px;
     }
     
   }
@@ -149,7 +152,7 @@
     border-image: url("../img/zigzag-line-desktop.svg") 23 0 27 fill repeat stretch;
     
     &__title {
-      margin: 50px 175px 25px;
+      margin: 55px 170px 25px;
     }
     
     &__list {
