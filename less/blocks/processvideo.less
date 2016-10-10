@@ -14,12 +14,12 @@
   
   &__text {
     line-height: 24px;
-    padding: 25px 45px 0px 30px;
+    padding: 30px 45px 0px 30px;
     display: block;
   }
   
   &__title {
-    padding: 25px 0px 25px 90px;
+    padding: 25px 0px 20px 90px;
     position: relative;
     
     &::before {
@@ -28,8 +28,8 @@
       width: 32px;
       height: 32px;
       background: url("../img/video.svg") center no-repeat;
-      top:34px;
-      left:30px;
+      top:30px;
+      left:32px;
     }
     
   }
@@ -57,19 +57,14 @@
   &__play {
     position: absolute;
     z-index: 100;
-    width: 101px;
-    height: 77px;
-    top:75px-37px;
-    left:130px-50px;
+    width: 114px;
+    height: 82px;
+    top:38px;
+    left:72px;
     border: none;
     background: none;
     
-    &:hover {
-      width: 121.2px;
-      height: 92.4px;
-      top: 75px - 46px ;
-      left: 130px - 60px;
-    }
+    
     
     &:active {
       width: 101px * 0.8;
@@ -118,7 +113,7 @@
   }
   
     &__title {
-      padding: 40px 0px 25px 100px;
+      padding: 37px 0px 25px 105px;
       font-size: 20px;
       
       & br {
@@ -161,15 +156,12 @@
   
     &__play {
       top:227px-37px;
-      left:334px-50px;
+      left:334px-55px;
       
-      &:hover {
-        top:227px - 46px ;
-        left:334px - 60px ;
-      }
+      
       &:active {
         top:227px - 28px ;
-        left:334px - 40px ;
+        left:334px - 45px ;
       }
       
     }
@@ -179,7 +171,7 @@
   .btn--processvideo {
     width: 586px;
     margin-left: 40px;
-    margin-top: 25px;
+    margin-top: 22px;
     margin-bottom: 15px;
   }
   
@@ -200,7 +192,7 @@
   
     display: block;
     padding-bottom: 30px;
-    margin: 55px 0px 100px;  
+    margin: 60px 0px 103px;  
     .greyborder();
     min-height: 455px;
     box-sizing: border-box;
@@ -211,7 +203,7 @@
   }
   
     &__title {
-      padding: 100px 0px 25px 760px;
+      padding: 95px 0px 25px 760px;
             
       & br {
         display: inline;
@@ -223,8 +215,8 @@
         width: 32px;
         height: 32px;
         background: url("../img/video.svg") center no-repeat;
-        top:50px;
-        left:760px;
+        top:40px;
+        left:762px;
       }
     
     }
@@ -250,15 +242,16 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    
+    &__text {
+      padding-top: 10px;
+    }
   
     &__play {
       top:227px-37px;
       left:340px-50px;
       
-      &:hover {
-        top:227px - 46px ;
-        left:340px - 60px ;
-      }
+      
       &:active {
         top:227px - 28px ;
         left:340px - 40px ;
@@ -272,6 +265,7 @@
     width: 230px;
     margin-left: 760px;
     margin-bottom: 10px;
+    margin-top: 25px;
   }
     
 }

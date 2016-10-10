@@ -1,6 +1,6 @@
 body {
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   overflow-x: hidden;
   font-size: 15px;
   line-height: 16px;
@@ -13,11 +13,21 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+
 h1, h2, h3, h4 {
   .blacktext();
   margin: 0px;
   padding: 0px;
-  font-family: "Open Sans Bold", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
 }
 
 h1 {

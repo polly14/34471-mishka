@@ -2,7 +2,7 @@
   
   &__wrapper {
     width: 260px;
-    margin: 30px auto 50px;
+    margin: 25px auto 45px;
     .clearfix();
   }
   
@@ -14,7 +14,7 @@
   & fieldset {
     border-top: solid 1px @maincolor;
     padding: 10px 0px;
-    margin-top: 25px;
+    margin-top: 23px;
   }
   
   & legend {
@@ -30,8 +30,17 @@
   }
   
   &__tip .orderform__field {
-    margin-top: 30px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    
+    &:last-child {
+      margin-top: 31px;
+      margin-bottom: 8px;
+    }
+    
   }
+  
+  
   
   &__color {
     margin-bottom: 10px;
@@ -41,7 +50,7 @@
     margin-top: 45px;
     
     &:first-child {
-      margin-top: 30px;
+      margin-top: 27px;
     }
     
   }
@@ -55,11 +64,11 @@
     font-size: 17px;
     border: none;
     border-bottom: 2px solid #000000;
-    height: 45px;
+    height: 49px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 5px;
-    box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
+    margin-top: 2px;
+    box-shadow: none ; 
     
     &:hover {
       border-bottom: 2px solid @maincolor;
@@ -67,19 +76,19 @@
     }
     &:active {
       border-bottom: 2px solid @maincolor;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
     &:focus {
       border-bottom: 2px solid @maincolor;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
    
     &:invalid {
       border-bottom: 2px solid #f0b1b1;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
     
   
@@ -105,8 +114,8 @@
   }
   
   &__tel input {
-    margin-top: 10px;
-    background-image: url("../img/phone.svg") 225px 50% no-repeat;
+    margin-top: 0px;
+    background: url("../img/phone.svg") 225px 50% no-repeat;
     background-size: 25px 25px;
     padding-right: 35px;
     
@@ -125,6 +134,10 @@
     
   }
   
+  &__tel {
+    margin-bottom: 10px;
+  }
+  
   &__email::before {
     content:"";
     position: absolute;
@@ -137,7 +150,7 @@
   }
   
   &__email input {
-    margin-top: 10px;
+    margin-top: 0px;
     background: url("../img/mail.svg") 220px 50% no-repeat;
     background-size: 32px 32px;
     padding-right: 35px;
@@ -161,6 +174,7 @@
     margin-top: 15px;
     
     & textarea {
+      margin-top: 8px;
       padding: 15px;
       width: 260px;
       box-sizing: border-box;
@@ -181,7 +195,7 @@
     content: "";
     width: 40px;
     height: 40px;
-    top: -10px;
+    top: -13px;
     left: 0px;
     border: 2px solid #444444;
     border-radius: 50%;
@@ -202,11 +216,12 @@
     content: "";
     width: 16px;
     height: 16px;
-    top: 2px;
+    top: -1px;
     left: 12px;
     background: @maincolor;
     border-radius: 50%;
   }
+  
   
   & input[type=checkbox] + label::before {
     position: absolute;
@@ -247,19 +262,19 @@
     }
     &:active {
       border: 2px solid @maincolor;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
     &:focus {
       border: 2px solid @maincolor;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
         
     &:invalid {
       border: 2px solid #f0b1b1;
-      box-shadow: none !important; /* убрираем стиль браузера по умолчанию */
-      outline: none !important; /* убрираем стиль браузера по умолчанию */
+      box-shadow: none ; 
+      outline: none ; 
     }
     
     &::placeholder {
@@ -289,7 +304,7 @@
   
     &__wrapper {
       width: 768px;
-      margin: 65px auto 40px;
+      margin: 65px auto 42px;
     }
     
     &__text {
@@ -315,7 +330,7 @@
     }
     
     &__f1 {
-      margin: 70px auto 40px;
+      margin: 75px auto 40px;
       width: 668px;
       
       & label {
@@ -325,7 +340,7 @@
     }
     
     &__f2 {
-      padding: 80px 50px 70px;
+      padding: 75px 50px 70px;
       width: 668px;
       background: @greyback;
       
@@ -336,7 +351,7 @@
     }
     
      &__f3 {
-      margin: 50px auto 70px;
+      margin: 50px auto 60px;
       width: 668px;
       
       & legend {
@@ -351,7 +366,7 @@
     }
     
      &__f4 {
-      padding: 60px 50px 60px;
+      padding: 50px 50px 55px;
       width: 668px;
       background: @greyback;
       margin: 0px;
@@ -363,11 +378,11 @@
     }
     
       &__f5 {
-      margin: 50px auto 30px;
+      margin: 40px auto 30px;
       width: 668px;
       
       & legend {
-        margin-top: 30px;
+        margin-top: 40px;
       }
             
     }
@@ -387,12 +402,13 @@
       margin-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
-      margin-left: 168px;      
+      margin-left: 168px;
+      justify-content: space-between;
+      
     }
   
     &__color .orderform__field {
       margin-top: 60px;
-      width: 250px;
       box-sizing: border-box;
     
       &:nth-child(1) {
@@ -400,6 +416,12 @@
       }
       &:nth-child(2) {
         margin-top: 0px;
+      }
+      &:nth-child(1n) {
+        width: 260px;
+      }
+       &:nth-child(2n) {
+        width: 238px;
       }
     
     }
@@ -433,8 +455,8 @@
   & input[type=checkbox]:checked + label::after {
     width: 33px;
     height: 23px;
-    top: -6px;
-    left: 13px;
+    top: -3px;
+    left: 11px;
     background: url("../img/tick.svg") center no-repeat;
   }
     
@@ -443,6 +465,7 @@
     height: 55px;
     box-sizing: border-box;
     margin-top: 0px;
+       margin-bottom: 10px;
     
     &::placeholder {
       color: @fadecolor;
@@ -451,7 +474,7 @@
   }
   
   &__pers div {
-    margin-top: 0px;
+    margin-top: -5px;
     margin-left: 168px;
   }
     
@@ -461,8 +484,9 @@
       width: 500px;
       margin-bottom: 15px;
       
+      
       & input {
-        padding-left: 15px;
+        padding-left: 20px;
       }
       
     }
@@ -473,7 +497,7 @@
       margin-bottom: 15px;
       
       & input {
-        padding-left: 15px;
+        padding-left: 20px;
       }
       
     }
@@ -483,9 +507,13 @@
       width: 500px; 
       
       & input {
-        padding-left: 15px;
+        padding-left: 20px;
       }
       
+    }
+    
+    &__tel {
+      margin-bottom: 5px;
     }
     
     &__tel input {
@@ -495,19 +523,19 @@
       margin-bottom: 15px;
       width: 500px;
       padding-left: 15px;
-      background: url("../img/phone.svg") 455px 50% no-repeat;
+      background: url("../img/phone.svg") 450px 50% no-repeat;
       
       &:hover {
-        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+        background: url("../img/phone-h.svg") 450px 50% no-repeat;
       }
       &:invalid {
-        background: url("../img/phone.svg") 455px 50% no-repeat;
+        background: url("../img/phone.svg") 450px 50% no-repeat;
       }
        &:active {
-        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+        background: url("../img/phone-h.svg") 450px 50% no-repeat;
       }
        &:focus {
-        background: url("../img/phone-h.svg") 455px 50% no-repeat;
+        background: url("../img/phone-h.svg") 450px 50% no-repeat;
       }
       
        
@@ -519,19 +547,19 @@
       margin-left: 168px;
       width: 500px;
       padding-left: 15px;
-      background: url("../img/mail.svg") 450px 50% no-repeat;
+      background: url("../img/mail.svg") 445px 50% no-repeat;
       
        &:hover {
-        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+        background: url("../img/mail-h.svg") 445px 50% no-repeat;
       }
        &:invalid {
-        background: url("../img/mail.svg") 450px 50% no-repeat;
+        background: url("../img/mail.svg") 445px 50% no-repeat;
       }
        &:active {
-        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+        background: url("../img/mail-h.svg") 445px 50% no-repeat;
       }
       &:focus {
-        background: url("../img/mail-h.svg") 450px 50% no-repeat;
+        background: url("../img/mail-h.svg") 445px 50% no-repeat;
       }
        
      
@@ -577,7 +605,7 @@
   
     &__wrapper {
       width: 1150px;
-      margin: 115px auto 90px;
+      margin: 105px auto 85px;
     }
     
     &__text {
@@ -590,7 +618,7 @@
     }
     
     &__f1 {
-      margin: 70px auto 40px;
+      margin: 75px auto 40px;
       width: 1050px;
       
       & label {
@@ -600,7 +628,7 @@
     }
     
     &__f2 {
-      padding: 80px 50px 70px;
+      padding: 80px 50px 70px ;
       width: 1050px;
       background: @greyback;
       
@@ -611,7 +639,7 @@
     }
     
      &__f3 {
-      margin: 50px auto 70px;
+      margin: 50px auto 60px;
       width: 1050px;
       
       & legend {
@@ -626,7 +654,7 @@
     }
     
      &__f4 {
-      padding: 60px 50px 60px;
+      padding: 50px 50px 60px;
       width: 1050px;
       background: @greyback;
       margin: 0px;
@@ -638,11 +666,11 @@
     }
     
       &__f5 {
-      margin: 50px auto 30px;
+      margin: 40px auto 30px;
       width: 1050px;
       
       & legend {
-        margin-top: 30px;
+        margin-top: 40px;
       }
             
     }
@@ -662,12 +690,13 @@
       margin-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
-      margin-left: 175px;      
+      margin-left: 175px;
+      width: 780px;
     }
   
     &__color .orderform__field {
       margin-top: 60px;
-      width: 260px;
+      width: 250px;
       box-sizing: border-box;
     
       &:nth-child(1) {
@@ -678,6 +707,12 @@
       }
       &:nth-child(3) {
         margin-top: 0px;
+      }
+      &:nth-child(1n) {
+        width: 250px;
+      }
+      &:nth-child(2n) {
+        width: 250px;
       }
     
     }
